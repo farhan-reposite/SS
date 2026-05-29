@@ -35,6 +35,18 @@ body, body * {
 .nd::after { content:attr(data-label); position:absolute; right:16px; top:50%; transform:translateY(-50%); white-space:nowrap; font-size:10px; font-weight:600; opacity:0; transition:opacity .2s; background:rgba(0,0,0,0.85); color:#fff; padding:2px 7px; border-radius:4px; }
 .nd:hover::after { opacity:1; }
 .nd.active, .nd:hover { background:#ff4500; transform:scale(1.5); }
+.pdf-export-btn { position:fixed; top:18px; right:20px; z-index:900; display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,.18); background:rgba(9,12,24,.78); color:#fff; padding:10px 14px; border-radius:8px; font-family:'League Spartan',sans-serif; font-size:12px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; box-shadow:0 8px 22px rgba(0,0,0,.18); backdrop-filter:blur(10px); transition:background .2s,border-color .2s,transform .2s; }
+.pdf-export-btn:hover { background:#ff4500; border-color:#ff8c42; transform:translateY(-1px); }
+.pdf-export-btn svg { width:15px; height:15px; flex-shrink:0; }
+
+@media print {
+  @page { size:A4 landscape; margin:0; }
+  html, body { width:100%; height:auto; overflow:visible !important; scroll-snap-type:none !important; background:#fff !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body, body * { cursor:auto !important; }
+  body > section { min-height:100vh; height:100vh; page-break-after:always; break-after:page; scroll-snap-align:none; }
+  #trail-cursor, #sp, #sidenav, #pdfExportBtn, #cmt-bar, #cmt-sidebar, .cmt-pin, .cmt-popup, .h-scroll { display:none !important; }
+  .rv, .rv.lft, .rv.rgt, .rv.scl { opacity:1 !important; transform:none !important; transition:none !important; }
+}
 
 /* REVEAL */
 .rv { opacity:0; transform:translateY(28px); transition:opacity .65s ease, transform .65s ease; }
@@ -381,7 +393,7 @@ body, body * {
 .th-closed::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(255,255,255,.015) 8px,rgba(255,255,255,.015) 16px);pointer-events:none;}
 .th-stamp{font-family:'League Spartan',sans-serif;font-size:11px;font-weight:900;letter-spacing:5px;text-transform:uppercase;color:#ff4500;border:3px solid #ff4500;padding:8px 18px;border-radius:4px;transform:rotate(-4deg);opacity:.9;flex-shrink:0;position:relative;}
 .th-stamp::before{content:'';position:absolute;inset:-6px;border:1.5px solid rgba(255,69,0,.3);border-radius:6px;}
-.th-closed-title{font-family:'League Spartan',sans-serif;font-size:38px;font-weight:900;color:#fff;line-height:1;text-transform:uppercase;letter-spacing:-1.5px;flex:1;}
+.th-closed-title{font-family:'League Spartan',sans-serif;font-size:36px;font-weight:900;color:#fff;line-height:1;text-transform:uppercase;letter-spacing:-1.5px;flex:1;}
 .th-closed-title span{color:#ff6b35;}
 .th-closed-divider{width:1px;align-self:stretch;background:rgba(255,255,255,.15);flex-shrink:0;}
 .th-closed-side{flex:1;display:flex;flex-direction:column;gap:8px;}
@@ -1690,6 +1702,11 @@ body.cmt-mode * { cursor:crosshair !important; }
   <button class="nd" data-target="closing" data-label="Penutup"></button>
 </nav>
 
+<button id="pdfExportBtn" class="pdf-export-btn" type="button" title="Export whole page to PDF">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+  PDF
+</button>
+
 <!-- ════════ §1 HERO ════════ -->
 <section id="hero">
 <!-- LED light strip traces — glowing dots travel off-screen -->
@@ -1742,9 +1759,9 @@ body.cmt-mode * { cursor:crosshair !important; }
     <!-- Main headline split into 3 lines for drama -->
     <h1 class="h-h1 rv" style="font-size:72px;line-height:.95;margin-bottom:20px;">
       <span style="display:block;font-size:14px;font-weight:600;letter-spacing:8px;color:rgba(255,255,255,.25);text-transform:uppercase;margin-bottom:12px;font-family:'DM Sans',sans-serif;"></span>
-      <em>Optimalisasi Proses</em> 
-       <span style="display:block;color:#fff;">Incoming Melalui</span>
-       <span style="display:block;font-size:96px;color:#ff4500;text-shadow:0 0 20px rgba(255,69,0,.35);">Otomasi</span>
+      <em>Incoming Process</em> 
+       <span style="display:block;color:#fff;">Optimization Through</span>
+       <span style="display:block;font-size:96px;color:#ff4500;text-shadow:0 0 20px rgba(255,69,0,.35);">Automation</span>
     </h1>
     <!-- Stats row -->
    
@@ -1923,7 +1940,7 @@ body.cmt-mode * { cursor:crosshair !important; }
           <rect x="248" y="138" width="78" height="26" rx="6" fill="rgba(239,68,68,.18)" stroke="rgba(239,68,68,.55)" stroke-width="1"/>
           <text x="287" y="155" font-family="League Spartan,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="800">− 1 BOX</text>
         </svg>
-        <p style="font-family:'DM Sans',sans-serif;font-size:18px;color:rgba(255,255,255,.7);line-height:1.7;margin:0;">Pada Tanggal <strong style="color: white;">11 Augustus 2025</strong> ditemukan di <strong style="color:#fff;">Warehouse Gresik</strong> bahwa part number <strong style="color:#f59e0b;">BAG010007D</strong>, part name Hook dari supplier KW, memiliki stok aktual <strong style="color:#f59e0b;">14 box</strong>, tetapi yang tercatat oleh operator ada sebanyak <strong style="color:#f59e0b;">15 box.</strong> </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:18px;color:rgba(255,255,255,.7);line-height:1.7;margin:0;">Pada Tanggal <strong style="color: white;">11 Augustus 2025</strong> ditemukan di <strong style="color:#fff;">Warehouse Gresik</strong> bahwa part no. <strong style="color:#f59e0b;">BAG010007D</strong>, part name Hook dari supplier KW, memiliki stok aktual <strong style="color:#f59e0b;">14 box</strong>, tetapi yang tercatat oleh operator ada sebanyak <strong style="color:#f59e0b;">15 box.</strong> </p>
       </div>
 
       <!-- Right: big image placeholder -->
@@ -1973,7 +1990,7 @@ body.cmt-mode * { cursor:crosshair !important; }
 <section id="process">
   <div class="pr-inner">
     <div class="sec-o-tag rv">Pemilihan Tema</div>
-    <h2 class="sec-n-h rv">Material Receiving Process Flow</h2>
+    <h2 class="sec-n-h rv">FLOW PROCESS : MATERIAL RECEIVING</h2>
     <div class="ic-overlay" id="icOverlay">
       <div style="display:flex;flex-direction:row;align-items:flex-start;gap:24px;max-width:90vw;">
         <div class="ic-a4">
@@ -2022,7 +2039,7 @@ body.cmt-mode * { cursor:crosshair !important; }
           <div class="pr-arrow-content">
             <div class="pr-arrow-num-row"><div class="pr-arrow-num">03</div><div class="pr-arrow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff4500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div></div>
             <div class="pr-arrow-title">Validasi Kuantitas</div>
-            <div class="pr-arrow-desc">Jumlah box per partnumber dicatat secara manual oleh operator dan dicocokkan dengan Incoming Checklist. <strong style="color:#ff6b35;"><br>Masalah:</strong> Dapat terjadi kesalahan hitung jumlah box.</div>
+            <div class="pr-arrow-desc">Jumlah box per Part No. dicatat secara manual oleh operator dan dicocokkan dengan Incoming Checklist. <strong style="color:#ff6b35;"><br>Masalah:</strong> Dapat terjadi kesalahan hitung jumlah box.</div>
             <div class="pr-arrow-pills"><span class="pr-arrow-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg> Resiko Salah Hitung</span></div>
           </div>
         </div>
@@ -2073,8 +2090,8 @@ body.cmt-mode * { cursor:crosshair !important; }
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             Resiko Salah Catat
           </div>
-          <p class="pd-desc">Incoming Checklist dibuat staff WHS dari PO Supplier secara manual via Excel. Pada langkah ini masih ada potensi human error saat mengetik jumlah, part number, atau data penerimaan lainnya.</p>
-          <div class="pd-note"><strong>Temuan proses:</strong> Dokumen kontrol awal belum tervalidasi sistem, sehingga kesalahan pada input manual dapat ikut terbawa ke proses receiving berikutnya.</div>
+          <p class="pd-desc">Incoming Checklist dibuat staff WHS dari PO Supplier secara manual via Excel. Pada langkah ini masih ada potensi human error saat mengetik jumlah, part no., atau data penerimaan lainnya.</p>
+          <div class="pd-note"><strong>Temuan proses:</strong> Dokumen kontrol dilakukan seara manual dan belum tervalidasi secara otomatis sehingga rentan terjadi kesalahan.</div>
            </div>
       </div>
 
@@ -2094,7 +2111,7 @@ body.cmt-mode * { cursor:crosshair !important; }
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             Resiko Salah Hitung
           </div>
-          <p class="pd-desc">Jumlah box per part number dicatat dan dicocokkan secara manual antara Incoming Checklist dengan aktual kedatangan. Tidak ada validasi otomatis sehingga operator rentan salah hitung.</p>
+          <p class="pd-desc">Jumlah box per part no. dicatat dan dicocokkan secara manual antara Incoming Checklist dengan aktual kedatangan. Tidak ada validasi otomatis sehingga operator rentan salah hitung.</p>
           <div class="pd-note"><strong>Temuan proses:</strong> Kasus BAG010007D menunjukkan stok aktual 14 box tetapi tercatat 15 box oleh operator, sehingga terjadi gap 1 box pada saat penerimaan.</div>
         
       </div>
@@ -2154,7 +2171,7 @@ body.cmt-mode * { cursor:crosshair !important; }
       <!-- BOTTOM: case closed banner -->
       <div class="th-closed">
         <div class="th-stamp">Tema Dipilih</div>
-        <div class="th-closed-title">Material Receiving<br> System <span>Digitalization</span></div>
+        <div class="th-closed-title">SYSTEM <span>DIGITALIZATION</span><br>OF MATERIAL RECEIVING</div>
         <div class="th-closed-divider"></div>
         <div class="th-closed-side">
            <div class="th-closed-side-t">Digitalisasi proses penerimaan material — dari pencatatan, validasi kuantitas, hingga distribusi status incoming antar departemen.</div>
@@ -3045,7 +3062,7 @@ body.cmt-mode * { cursor:crosshair !important; }
               <div class="mp-rc-sol">
                 <div class="mp-rc-sol-l">Solusi Digital</div>
                 <div class="mp-rc-sol-t">QR Scanner + Andon Board</div>
-                <div class="mp-rc-sol-d">Tiap box di-scan untuk validasi otomatis. Andon Board menampilkan status per partnumber: OK, telat, kurang, atau berlebih.</div>
+                <div class="mp-rc-sol-d">Tiap box di-scan untuk validasi otomatis. Andon Board menampilkan status per part no: OK, telat, kurang, atau berlebih.</div>
               </div>
               <div class="mp-rc-feats">
                 <div class="mp-rc-feat">
@@ -3593,6 +3610,11 @@ const updNav = () => {
 window.addEventListener('scroll', updNav, {passive:true});
 window.addEventListener('resize', updNav);
 updNav();
+
+const pdfExportBtn = document.getElementById('pdfExportBtn');
+if (pdfExportBtn) {
+  pdfExportBtn.addEventListener('click', () => window.print());
+}
 
 // Tabs
 document.querySelectorAll('.an-tab').forEach(btn => {
