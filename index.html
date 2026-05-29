@@ -106,8 +106,8 @@ body, body * {
 .vm-pill-m { color:#7db4ff; }
 .vm-quote { font-family:'League Spartan',sans-serif; font-size:22px; font-weight:800; color:#fff; line-height:1.3; letter-spacing:-.3px; text-transform:uppercase; margin:0; flex-grow:1; }
 .vm-quote-foot { margin-top:24px; padding-top:16px; border-top:1px solid rgba(255,255,255,.07); font-family:'League Spartan',sans-serif; font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; }
-.vm-quote-foot-v { color:rgba(255,140,66,.5); }
-.vm-quote-foot-m { color:rgba(96,165,250,.5); }
+.vm-quote-foot-v { color:rgba(255, 201, 168); }
+.vm-quote-foot-m { color:rgba(168, 207, 255); }
 .co-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:6px; }
 .co-tag-pill { font-family:'League Spartan',sans-serif; font-size:13px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:4px 11px; border-radius:100px; background:rgba(255,69,0,.07); color:#ff4500; border:1px solid rgba(255,69,0,.17); transition:all .2s; cursor:default; }
 .co-tag-pill:hover{background:#ff4500;color:#fff;transform:translateY(-2px);}
@@ -149,21 +149,27 @@ body, body * {
 .sec-n-h{font-family:'League Spartan',sans-serif;font-size:54px;font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:8px;text-transform:uppercase;}
 .sec-n-s{font-size:14px;color:rgba(255,255,255,.35);line-height:1.7;margin-bottom:40px;max-width:480px;}
 .tl-table{width:100%;}
-.tl-head-row{display:grid;grid-template-columns:36px 28px 1fr 2.4fr;gap:16px;align-items:center;padding:0 10px 14px;border-bottom:1px solid rgba(255,255,255,.1);}
+.tl-head-row{display:grid;grid-template-columns:54px 28px 1fr 2.4fr;gap:16px;align-items:center;padding:0 10px 14px;border-bottom:1px solid rgba(255,255,255,.1);}
 .tl-head-row > span{font-family:'League Spartan',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.22);}
+.tl-month-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:6px;}
+.tl-month-cols span{font-family:'League Spartan',sans-serif;font-size:14px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);text-align:center;padding:0 0 6px;border-left:1px solid rgba(255,255,255,.08);}
+.tl-month-cols span:first-child{border-left:none;}
 .tl-week-cols{display:grid;grid-template-columns:repeat(12,1fr);gap:0;}
-.tl-week-cols span{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;color:rgba(255,255,255,.28);text-align:center;border-left:1px solid rgba(255,255,255,.06);padding:2px 0;}
+.tl-week-cols span{font-family:'League Spartan',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;color:rgba(255, 255, 255, 0.6);text-align:center;border-left:1px solid rgba(255,255,255,.06);padding:2px 0;}
 .tl-week-cols span:first-child{border-left:none;}
-.tl-r{display:grid;grid-template-columns:36px 28px 1fr 2.4fr;gap:16px;align-items:center;padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.04);transition:background .2s;border-radius:7px;}
+.tl-week-cols span:nth-child(4n+1):not(:first-child){border-left:1px solid rgba(255,255,255,.35);}
+.tl-r{display:grid;grid-template-columns:54px 28px 1fr 2.4fr;gap:16px;align-items:center;padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.04);transition:background .2s;border-radius:7px;}
 .tl-r:hover{background:rgba(96,165,250,.05);}
-.pb{font-family:'League Spartan',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 7px;border-radius:5px;text-align:center;}
-.pb-p{background:rgba(59,130,246,.2);color:#93c5fd;}
-.pb-d{background:rgba(251,191,36,.2);color:#fde68a;}
-.pb-c{background:rgba(52,211,153,.2);color:#6ee7b7;}
-.pb-a{background:rgba(167,139,250,.2);color:#c4b5fd;}
+.tl-head-row > span:first-child{color:rgba(255,255,255,.52);text-align:center;}
+.pb{font-family:'League Spartan',sans-serif;font-size:13px;font-weight:800;letter-spacing:0;text-transform:uppercase;width:38px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid currentColor;background:rgba(255,255,255,.035);}
+.pb-p{color:#93c5fd;}
+.pb-d{color:#fde68a;}
+.pb-c{color:#6ee7b7;}
+.pb-a{color:#c4b5fd;}
 .tl-act{font-size:13px;color:rgba(255,255,255,.7);font-weight:500;}
 .tl-whn{font-size:12px;color:rgba(255,255,255,.3);}
 .bars-wrap{height:38px;position:relative;background:rgba(255,255,255,.04) repeating-linear-gradient(90deg,transparent 0,transparent calc(8.3333% - 1px),rgba(255,255,255,.07) calc(8.3333% - 1px),rgba(255,255,255,.07) 8.3333%);border-radius:4px;overflow:hidden;}
+.bars-wrap::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent calc(33.3333% - 1px),rgba(255,255,255,.28) calc(33.3333% - 1px),rgba(255,255,255,.28) 33.3333%,transparent 33.3333%,transparent calc(66.6667% - 1px),rgba(255,255,255,.28) calc(66.6667% - 1px),rgba(255,255,255,.28) 66.6667%,transparent 66.6667%);}
 .bars-wrap::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.06);}
 .bar-p{height:10px;border-radius:5px;background:rgba(96,165,250,.45);position:absolute;top:4px;transition:width 1.2s cubic-bezier(.16,1,.3,1);}
 .bar-a{height:10px;border-radius:5px;background:linear-gradient(90deg,#ff4500,#ff8c42);position:absolute;top:23px;transition:width 1.2s cubic-bezier(.16,1,.3,1) .2s;box-shadow:0 2px 8px rgba(255,69,0,.3);}
@@ -175,6 +181,13 @@ body, body * {
 #process { background:#050a18; padding:90px 80px; position:relative; overflow:visible; }
 #process::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%, rgba(255,69,0,.06) 0%, transparent 70%);}
 .pr-inner{max-width:1400px;margin:0 auto;position:relative;z-index:1;}
+.ic-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;color:rgba(255,255,255,.7);font-family:'League Spartan',sans-serif;font-size:14px;font-weight:600;letter-spacing:.5px;cursor:pointer;transition:background .2s,border-color .2s,color .2s;}
+.ic-btn:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.35);color:#fff;}
+.ic-overlay{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);z-index:9999;opacity:0;pointer-events:none;transition:opacity .25s;}
+.ic-overlay.visible{opacity:1;pointer-events:auto;}
+.ic-a4{max-height:90vh;max-width:90vw;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.6);}
+.ic-a4 img{display:block;max-height:90vh;max-width:90vw;width:auto;height:auto;}
+.ic-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:14px;font-family:monospace;background:#f5f5f5;}
 .sec-o-tag{font-family:'League Spartan',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#fb923c;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
 .sec-o-tag::before{content:'';display:block;width:20px;height:2px;background:#fb923c;}
 .sec-o-h{font-family:'League Spartan',sans-serif;font-size:54px;font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:-32px;text-transform:uppercase;}
@@ -214,38 +227,108 @@ body, body * {
 /* ── Alur Proses entrance animations ── */
 .pr-anim-hidden { opacity:0; }
 
+/* ── Arrow Timeline ── */
+.pr-arrow-row{display:flex;align-items:stretch;width:100%;margin-top:52px;gap:1px;}
+.pr-arrow{flex:1;position:relative;display:flex;flex-direction:column;min-height:280px;padding:1.5px;box-sizing:border-box;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%);transition:transform .3s,filter .3s,background .3s;cursor:default;}
+.pr-arrow:first-child{clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%);}
+.pr-arrow:last-child{clip-path:polygon(0 0,100% 0,100% 100%,0 100%,22px 50%);}
+.pr-arrow.ok{background:rgba(255,255,255,.12);}
+.pr-arrow.warn{background:rgba(255,255,255,.14);}
+.pr-arrow-inner{position:relative;flex:1;display:flex;flex-direction:column;clip-path:inherit;overflow:hidden;}
+.pr-arrow.ok .pr-arrow-inner{background:linear-gradient(135deg,rgba(56,189,248,.12) 0%,rgba(56,189,248,.06) 60%,rgba(8,18,40,.5) 100%),#080f1e;}
+.pr-arrow.warn .pr-arrow-inner{background:linear-gradient(135deg,rgba(255,69,0,.16) 0%,rgba(255,107,53,.08) 60%,rgba(30,8,4,.5) 100%),#160a04;}
+.pr-arrow.ok:hover{transform:translateY(-6px);background:rgba(255,255,255,.35);filter:brightness(1.1);}
+.pr-arrow.warn:hover{transform:translateY(-6px);background:rgba(255,255,255,.38);filter:brightness(1.1);}
+/* Image block — sits at top, clipped by parent clip-path automatically */
+.pr-arrow-img{width:100%;flex-shrink:0;line-height:0;}
+.pr-arrow-img img{width:100%;height:150px;object-fit:cover;display:block;}
+/* Text content */
+.pr-arrow-content{padding:14px 24px 22px 36px;display:flex;flex-direction:column;gap:0;flex:1;}
+.pr-arrow:first-child .pr-arrow-content{padding-left:20px;}
+.pr-arrow-num-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px;}
+.pr-arrow-num{font-family:'League Spartan',sans-serif;font-size:54px;font-weight:900;letter-spacing:-2px;line-height:.9;}
+.pr-arrow.ok .pr-arrow-num{color:#38bdf8;text-shadow:0 0 24px rgba(56,189,248,.4);}
+.pr-arrow.warn .pr-arrow-num{color:#ff6b35;text-shadow:0 0 24px rgba(255,69,0,.4);}
+.pr-arrow-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;backdrop-filter:blur(6px);}
+.pr-arrow.ok .pr-arrow-icon{background:rgba(56,189,248,.2);border:1px solid rgba(56,189,248,.4);}
+.pr-arrow.warn .pr-arrow-icon{background:rgba(255,69,0,.2);border:1px solid rgba(255,69,0,.3);}
+.pr-arrow-title{font-family:'League Spartan',sans-serif;font-size:17px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:-.2px;line-height:1.2;margin-bottom:7px;}
+.pr-arrow-desc{font-size:11.5px;line-height:1.6;color:rgba(255,255,255,.78);}
+.pr-arrow-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
+.pr-arrow-pill{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.3px;backdrop-filter:blur(4px);}
+.pr-arrow.ok .pr-arrow-pill{background:rgba(56,189,248,.15);color:#7dd3fc;border:1px solid rgba(56,189,248,.3);}
+.pr-arrow.warn .pr-arrow-pill{background:rgba(255,69,0,.15);color:#fb923c;border:1px solid rgba(255,69,0,.25);}
+/* Status badge strip — between image and content */
+.pr-arrow-badge{display:flex;align-items:center;justify-content:center;gap:6px;padding:6px 16px;font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;flex-shrink:0;}
+.pr-arrow-badge-dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pr-arrow.ok .pr-arrow-badge{background:rgba(56,189,248,.18);border-top:1px solid rgba(56,189,248,.25);border-bottom:1px solid rgba(56,189,248,.25);color:#7dd3fc;}
+.pr-arrow.ok .pr-arrow-badge-dot{background:rgba(56,189,248,.3);border:1px solid rgba(56,189,248,.5);}
+.pr-arrow.warn .pr-arrow-badge{background:rgba(255,69,0,.18);border-top:1px solid rgba(255,69,0,.25);border-bottom:1px solid rgba(255,69,0,.25);color:#fb923c;}
+.pr-arrow.warn .pr-arrow-badge-dot{background:rgba(255,69,0,.3);border:1px solid rgba(255,69,0,.5);}
+.pr-ic-wrap{display:flex;justify-content:center;margin-top:28px;}
+
 /* ══════════════════════════════════════ §5b PROCESS DETAIL ══════════════════════════════════════ */
-#process-detail { background:#090c18; padding:80px 80px; border-top:1px solid rgba(255,107,53,.1); }
-.pd-inner { max-width:1200px; margin:0 auto; }
-.pd-split { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:32px; }
-.pd-card { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:16px; overflow:hidden; transition:transform .3s, border-color .3s; }
-.pd-card:hover { transform:translateY(-4px); border-color:rgba(255,107,53,.3); }
-.pd-card-head { padding:18px 22px; border-bottom:1px solid rgba(255,255,255,.06); display:flex; align-items:center; gap:14px; }
-.pd-step-badge { font-family:'League Spartan',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; background:rgba(255,107,53,.15); color:#ff6b35; padding:4px 10px; border-radius:6px; flex-shrink:0; }
-.pd-step-name { font-family:'League Spartan',sans-serif; font-size:19px; font-weight:700; color:#fff; line-height:1.2; text-transform:uppercase; }
-.pd-card-body { padding:18px 22px; }
-.pd-problem-pill { display:inline-flex; align-items:center; gap:6px; background:rgba(239,68,68,.1); border:1px solid rgba(239,68,68,.2); border-radius:6px; padding:5px 12px; font-size:12px; color:#f87171; font-weight:600; margin-bottom:14px; }
-.pd-desc { font-size:13px; color:rgba(255,255,255,.75); line-height:1.75; margin-bottom:16px; }
-/* Data table inside pd-card */
-.pd-tbl { width:100%; border-collapse:collapse; font-size:12px; }
-.pd-tbl td { padding:7px 12px; border-bottom:1px solid rgba(255,255,255,.05); color:rgba(255,255,255,.7); }
-.pd-tbl tr:last-child td { border-bottom:none; background:rgba(255,107,53,.07); color:#ff6b35; font-weight:700; }
-.pd-tbl .td-r { text-align:right; font-family:'League Spartan',sans-serif; font-weight:700; }
-/* CT breakdown rows inside pd-card */
-.pd-ct-row { display:flex; justify-content:space-between; align-items:center; padding:8px 12px; background:rgba(255,255,255,.03); border-radius:7px; margin-bottom:6px; }
-.pd-ct-label { font-size:12px; color:rgba(255,255,255,.7); }
-.pd-ct-val { font-family:'League Spartan',sans-serif; font-size:18px; font-weight:700; color:#ff6b35; }
-/* Big CT box */
-.pd-big-ct { background:rgba(255,69,0,.08); border:1px solid rgba(255,69,0,.2); border-radius:10px; padding:14px 18px; margin-top:14px; display:flex; align-items:baseline; gap:8px; }
-.pd-big-ct-num { font-family:'League Spartan',sans-serif; font-size:56px; font-weight:800; color:#ff4500; line-height:1; letter-spacing:-2px; }
-.pd-big-ct-unit { font-size:13px; color:rgba(255,69,0,.6); line-height:1.4; }
-/* Conclusion bar */
-.pd-conclusion { background:rgba(255,69,0,.06); border:1px solid rgba(255,69,0,.15); border-radius:12px; padding:20px 28px; display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
-.pd-concl-item { flex:1; min-width:200px; }
-.pd-concl-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.55); margin-bottom:5px; }
-.pd-concl-text { font-family:'League Spartan',sans-serif; font-size:15px; font-weight:700; color:rgba(255,255,255,.9); line-height:1.3; text-transform:uppercase; }
-.pd-concl-arrow { font-size:24px; color:rgba(255,107,53,.7); flex-shrink:0; }
-.pd-concl-theme { font-family:'League Spartan',sans-serif; font-size:22px; font-weight:800; color:#ff6b35; line-height:1.2; text-transform:uppercase; }
+#process-detail { background:#f0ece4; padding:90px 80px; position:relative; overflow:hidden; border-top:1px solid rgba(124,58,30,.12); }
+#process-detail::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 27px,rgba(0,0,0,.035) 27px,rgba(0,0,0,.035) 28px),repeating-linear-gradient(90deg,transparent,transparent 27px,rgba(0,0,0,.035) 27px,rgba(0,0,0,.035) 28px);pointer-events:none;}
+#process-detail::after{content:'';position:absolute;left:-120px;bottom:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.09),transparent 68%);pointer-events:none;}
+.pd-inner { max-width:1200px; margin:0 auto; position:relative; z-index:1; }
+#process-detail .sec-n-tag{color:#7c3a1e;}
+#process-detail .sec-n-tag::before{background:#7c3a1e;}
+#process-detail .sec-n-h{color:#1a0e06;}
+.pd-lead{font-size:14px;color:#6b5a49;line-height:1.75;max-width:760px;margin:12px 0 0;}
+.pd-board{display:flex;flex-direction:column;gap:28px;margin-top:40px;}
+.pd-split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+.pd-card{background:#fffef8;border:1px solid #d9cdb8;border-radius:4px;overflow:visible;position:relative;box-shadow:3px 3px 0 rgba(0,0,0,.08),0 1px 4px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s;}
+.pd-card::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:12px;height:12px;border-radius:50%;background:var(--pd-pin,#c0392b);box-shadow:0 1px 3px rgba(0,0,0,.3),inset 0 -1px 2px rgba(0,0,0,.2);}
+.pd-card.lft{--pd-pin:#c0392b;transform:rotate(-1deg);}
+.pd-card.rgt{--pd-pin:#1a5a9e;transform:rotate(1deg);}
+.pd-card:hover{transform:rotate(0deg) translateY(-3px);box-shadow:4px 6px 0 rgba(0,0,0,.08),0 6px 18px rgba(0,0,0,.08);}
+.pd-card-head{padding:18px 22px 14px;border-bottom:1px dashed #d8cdbd;display:flex;align-items:center;gap:12px;}
+.pd-step-badge{font-family:'League Spartan',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:#fef3c7;color:#b45309;padding:4px 10px;border-radius:6px;flex-shrink:0;}
+.pd-step-name{font-family:'League Spartan',sans-serif;font-size:20px;font-weight:800;color:#1a0e06;line-height:1.2;text-transform:uppercase;}
+.pd-media{height:220px;overflow:hidden;border-bottom:1px solid #e8dcc9;background:#e8e2d8;}
+.pd-media img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.02) contrast(1.03);}
+.pd-media-ph{height:100%;display:flex;align-items:center;justify-content:center;color:#8a7c6d;font-size:12px;font-family:'Courier New',monospace;background:repeating-linear-gradient(-45deg,#f6f0e7,#f6f0e7 12px,#efe5d8 12px,#efe5d8 24px);}
+.pd-card-body{padding:18px 22px 22px;}
+.pd-problem-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.18);border-radius:6px;padding:5px 12px;font-size:12px;color:#b91c1c;font-weight:700;margin-bottom:14px;}
+.pd-desc{font-size:13px;color:#5a4a3a;line-height:1.75;margin-bottom:14px;}
+.pd-note{background:#f7f0e3;border:1px solid #eadfcb;border-radius:10px;padding:12px 14px;font-size:12px;color:#5a4a3a;line-height:1.65;margin-bottom:16px;}
+.pd-note strong{color:#1a0e06;}
+.pd-tbl{width:100%;border-collapse:collapse;font-size:12px;}
+.pd-tbl td{padding:8px 0;border-bottom:1px solid #ece2d3;color:#6b5a49;}
+.pd-tbl .td-r{text-align:right;font-family:'League Spartan',sans-serif;font-weight:700;color:#1a0e06;}
+.pd-tbl tr:last-child td{border-bottom:none;border-top:1px solid #dccfbd;padding-top:10px;color:#b45309;font-weight:800;}
+.pd-card-foot{margin-top:14px;border-radius:10px;padding:11px 13px;font-size:12px;line-height:1.65;}
+.pd-card-foot.warn{background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.16);color:#8a2d1f;}
+.pd-card-foot.info{background:rgba(26,90,158,.08);border:1px solid rgba(26,90,158,.16);color:#1e4b79;}
+.pd-card.lft .pd-card-body > div[style*="margin-top:12px"]{display:none;}
+.pd-summary{position:relative;display:grid;grid-template-columns:auto 1.2fr .9fr .9fr;gap:22px;align-items:center;background:#1a0e06;border-radius:8px;padding:28px 32px;overflow:hidden;}
+.pd-summary::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(255,255,255,.015) 8px,rgba(255,255,255,.015) 16px);pointer-events:none;}
+.pd-summary > *{position:relative;z-index:1;}
+.pd-summary-stamp{font-family:'League Spartan',sans-serif;font-size:11px;font-weight:900;letter-spacing:4px;text-transform:uppercase;color:#ff4500;border:3px solid #ff4500;padding:8px 16px;border-radius:4px;transform:rotate(-4deg);}
+.pd-summary-text{font-size:13px;line-height:1.7;color:rgba(255,255,255,.78);}
+.pd-summary-text strong{color:#fff;}
+.pd-summary-case,.pd-summary-theme{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 16px;}
+.pd-summary-k{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:6px;}
+.pd-summary-v{font-family:'League Spartan',sans-serif;font-size:15px;font-weight:800;color:#fff;line-height:1.3;text-transform:uppercase;}
+.pd-summary-theme .pd-summary-v{color:#ff6b35;font-size:22px;line-height:1.1;letter-spacing:-.4px;}
+
+@media (max-width:1100px){
+  #process-detail{padding:80px 40px;}
+  .pd-split{grid-template-columns:1fr;}
+  .pd-card.lft,.pd-card.rgt{transform:none;}
+  .pd-summary{grid-template-columns:1fr 1fr;}
+  .pd-summary-stamp,.pd-summary-text{grid-column:1 / -1;}
+  .pd-summary-stamp{justify-self:start;}
+}
+
+@media (max-width:700px){
+  #process-detail{padding:70px 20px;}
+  .pd-card-head,.pd-card-body{padding-left:16px;padding-right:16px;}
+  .pd-media{height:180px;}
+  .pd-summary{grid-template-columns:1fr;padding:24px 20px;}
+  .pd-summary-theme .pd-summary-v{font-size:18px;}
+}
 
 /* ══════════════════════════════════════ §6 THEME ══════════════════════════════════════ */
 #theme-section { background:#f0ece4; padding:90px 80px; position:relative; overflow:hidden; }
@@ -254,7 +337,7 @@ body, body * {
 .sec-w-tag{font-family:'League Spartan',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#7c3a1e;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
 .sec-w-tag::before{content:'';display:block;width:20px;height:2px;background:#7c3a1e;}
 .sec-w-h{font-family:'League Spartan',sans-serif;font-size:54px;font-weight:800;color:#1a0e06;letter-spacing:-1px;margin-bottom:8px;text-transform:uppercase;}
-.sec-w-s{font-size:14px;color:#7a6a5a;line-height:1.7;margin-bottom:44px;max-width:460px;}
+.sec-w-s{font-size:14px;color:#7a6a5a;line-height:1.7;margin-bottom:44px;max-width:600px;}
 /* ── Kesimpulan Tema — Detective Case Board ── */
 .th-board{display:flex;flex-direction:column;gap:32px;margin-top:48px;}
 
@@ -270,10 +353,13 @@ body, body * {
 .th-ev-card.rd{--pin-c:#c0392b;transform:rotate(-1.5deg);}
 .th-ev-card.am{--pin-c:#c07c00;transform:rotate(.8deg);}
 .th-ev-card.bl{--pin-c:#1a5a9e;transform:rotate(-1deg);}
+.th-ev-card.gr{--pin-c:#059669;transform:rotate(-1deg);background:#f3fff8;border-color:#b7e7d1;}
 .th-ev-card:hover{transform:rotate(0deg) translateY(-3px);}
 .th-ev-step{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;color:var(--pin-c,#c0392b);text-transform:uppercase;}
 .th-ev-title{font-family:'League Spartan',sans-serif;font-size:14px;font-weight:800;color:#1a0e06;line-height:1.2;text-transform:uppercase;}
 .th-ev-desc{font-size:11.5px;color:#5a4a3a;line-height:1.6;margin-top:2px;}
+.th-ev-card.gr .th-ev-title{color:#065f46;}
+.th-ev-card.gr .th-ev-desc{color:#166534;}
 
 /* Red string SVG connector */
 .th-string{grid-column:2;display:flex;align-items:center;justify-content:center;}
@@ -389,7 +475,7 @@ body, body * {
 
 /* ══════════════════════════════════════ §8 FISHBONE ══════════════════════════════════════ */
 #fishbone { background:#0a0d1a; padding:90px 40px; position:relative; overflow:hidden; }
-#fishbone::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 50% at 80% 50%,rgba(255,69,0,.08),transparent 60%),radial-gradient(ellipse 40% 40% at 15% 50%,rgba(239,68,68,.05),transparent 60%); pointer-events:none; }
+#fishbone::before { content:none; }
 .fb-inner{max-width:1600px;margin:0 auto;position:relative;z-index:1;}
 
 /* ── Custom Fishbone Diagram ── */
@@ -438,7 +524,7 @@ body, body * {
 .sec-b-tag::before{content:'';display:block;width:20px;height:2px;background:#ff6b35;}
 .sec-b-h{font-family:'League Spartan',sans-serif;font-size:54px;font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:8px;text-transform:uppercase;}
 .sec-b-s{font-size:14px;color:rgba(255,255,255,.35);line-height:1.7;margin-bottom:40px;max-width:480px;}
-.fb-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:12px;}
+.fb-wrap{border-radius:16px;overflow:hidden;}
 
 /* ══════════════════════════════════════ §9 TARGET ══════════════════════════════════════ */
 #target { background:#f2f1ee; background-image:linear-gradient(rgba(0,0,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.025) 1px,transparent 1px); background-size:40px 40px; padding:90px 80px; position:relative; }
@@ -1030,6 +1116,237 @@ body, body * {
 .sn-mini span { font-size:11px; color:rgba(255,255,255,.5); letter-spacing:.5px; }
 .sn-mini strong { font-family:'League Spartan',sans-serif; font-size:16px; font-weight:700; color:rgba(255,255,255,.9); }
 
+/* ── Penanggulangan: Before/After Flow + Root Cause Resolution ── */
+.mp-eyebrow{font-family:'League Spartan',sans-serif;font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#ff4500;margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+.mp-eyebrow::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#ff4500,transparent);}
+.mp-section-h{font-family:'League Spartan',sans-serif;font-size:28px;font-weight:800;color:#0f172a;letter-spacing:-.5px;margin-bottom:18px;}
+
+/* New process walkthrough */
+.mp-newproc{margin-top:18px;margin-bottom:42px;}
+.mp-newproc-shell{background:linear-gradient(145deg,#09101d 0%,#172554 42%,#10233f 70%,#0f172a 100%);border:1px solid rgba(255,107,53,.18);border-radius:26px;padding:28px;box-shadow:0 22px 54px rgba(15,23,42,.22);position:relative;overflow:hidden;}
+.mp-newproc-shell::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(255,107,53,.22),transparent 30%),radial-gradient(circle at bottom left,rgba(16,185,129,.16),transparent 28%),linear-gradient(120deg,rgba(255,255,255,.03),transparent 40%);pointer-events:none;}
+.mp-newproc-shell::after{content:'';position:absolute;left:-80px;right:-80px;top:56%;height:120px;background:linear-gradient(90deg,transparent,rgba(255,107,53,.16) 18%,rgba(255,184,0,.14) 50%,rgba(52,211,153,.14) 82%,transparent);filter:blur(26px);transform:rotate(-7deg);pointer-events:none;}
+.mp-newproc-head,.mp-newproc-grid,.mp-newproc-note{position:relative;z-index:1;}
+.mp-newproc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:20px;}
+.mp-newproc-kicker{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#ffb493;margin-bottom:5px;}
+.mp-newproc-title{font-family:'League Spartan',sans-serif;font-size:26px;font-weight:800;color:#fff;letter-spacing:-.4px;line-height:1.05;max-width:620px;}
+.mp-newproc-sub{font-size:12px;color:rgba(255,255,255,.68);line-height:1.55;max-width:620px;margin-top:8px;}
+.mp-newproc-pill{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#34d399;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.28);border-radius:999px;padding:8px 12px;white-space:nowrap;box-shadow:0 8px 22px rgba(52,211,153,.12);}
+.mp-newproc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start;}
+.mp-newproc-step{min-height:100%;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:22px 14px 14px;backdrop-filter:blur(10px);position:relative;display:flex;flex-direction:column;box-shadow:0 18px 32px rgba(15,23,42,.24);transition:transform .35s ease,box-shadow .35s ease;}
+.mp-newproc-step.is-improved{background:linear-gradient(160deg,rgba(16,185,129,.22),rgba(255,255,255,.08));border-color:rgba(52,211,153,.28);}
+.mp-newproc-step:nth-child(1),.mp-newproc-step:nth-child(2),.mp-newproc-step:nth-child(3),.mp-newproc-step:nth-child(4){transform:none;}
+.mp-newproc-step:hover{transform:translateY(-6px);box-shadow:0 24px 42px rgba(15,23,42,.3);}
+.mp-newproc-step::after{content:'';position:absolute;top:46%;right:-24px;width:32px;height:32px;border-radius:999px;background:linear-gradient(135deg,#ff8c42,#ff4500);box-shadow:0 0 0 6px rgba(255,107,53,.12),0 12px 28px rgba(255,69,0,.32);transform:translateY(-50%);}
+.mp-newproc-step::before{content:'';position:absolute;top:46%;right:-12px;width:34px;height:2px;background:linear-gradient(90deg,rgba(255,140,66,0),#ffd166 45%,#34d399 100%);transform:translateY(-50%) rotate(-10deg);transform-origin:left center;}
+.mp-newproc-step:nth-child(2)::before,.mp-newproc-step:nth-child(4)::before{transform:translateY(-50%) rotate(12deg);}
+.mp-newproc-step:last-child::after,.mp-newproc-step:last-child::before{display:none;}
+.mp-newproc-step-top{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-bottom:12px;position:relative;z-index:1;}
+.mp-newproc-step-n{font-family:'League Spartan',sans-serif;font-size:24px;font-weight:900;letter-spacing:1px;color:#fff;background:linear-gradient(135deg,#ff6b35,#ff4500);border-radius:999px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;position:absolute;top:-28px;left:-20px;line-height:;box-shadow:0 10px 22px rgba(255,107,53,.32);z-index:2;}
+.mp-newproc-step.is-improved .mp-newproc-step-n{background:linear-gradient(135deg,#10b981,#059669);box-shadow:0 10px 22px rgba(16,185,129,.32);}
+.mp-newproc-step-tag{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#c4b5fd;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:5px 8px;border-radius:999px;}
+.mp-newproc-media{aspect-ratio:4/4;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:rgba(15,23,42,.85);margin-bottom:12px;position:relative;box-shadow:0 10px 20px rgba(2,6,23,.3);}
+.mp-newproc-media img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.03);filter:saturate(1.05) contrast(1.03);}
+.mp-newproc-media::before{content:'';position:absolute;inset:10px auto auto 10px;width:38px;height:38px;border-top:2px solid rgba(255,255,255,.7);border-left:2px solid rgba(255,255,255,.7);border-radius:10px 0 0 0;z-index:1;}
+.mp-newproc-media::after{display:none;}
+.mp-newproc-step-t{font-family:'League Spartan',sans-serif;font-size:16px;font-weight:800;color:#fff;letter-spacing:-.25px;line-height:1.15;margin-bottom:6px;}
+.mp-newproc-step-s{font-size:11.5px;line-height:1.55;color:rgba(255,255,255,.72);}
+.mp-newproc-step-meta{margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid rgba(255,255,255,.08);}
+.mp-newproc-step-meta span{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#ffb493;}
+.mp-newproc-step-meta strong{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#34d399;}
+.mp-newproc-improved{position:absolute;top:6px;left: 49px;font-family:'League Spartan',sans-serif;font-size:9px;font-weight:900;letter-spacing:1.3px;text-transform:uppercase;color:#ecfdf5;background:linear-gradient(135deg,#22c55e,#059669);border:1px solid rgba(167,243,208,.45);border-radius:999px;padding:6px 10px;box-shadow:0 10px 22px rgba(16,185,129,.24);z-index:2;}
+.mp-newproc-note{display:flex;align-items:center;gap:12px;margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);}
+.mp-newproc-note-badge{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#0f172a;background:#f8fafc;border-radius:999px;padding:7px 12px;flex-shrink:0;}
+.mp-newproc-note-t{font-size:11.5px;color:rgba(255,255,255,.72);line-height:1.55;}
+
+/* Flow comparison */
+.mp-flow{margin-top:18px;margin-bottom:48px;}
+.mp-flow-grid{display:grid;grid-template-columns:1fr 56px 1fr;gap:18px;align-items:stretch;}
+.mp-flow-col{border-radius:16px;padding:20px;display:flex;flex-direction:column;position:relative;overflow:hidden;}
+.mp-flow-col.before{background:linear-gradient(160deg,#fff1f1,#fef2f2);border:1px solid #fecaca;}
+.mp-flow-col.after{background:linear-gradient(160deg,#ecfdf5,#f0fdf4);border:1px solid #a7f3d0;}
+.mp-flow-col::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
+.mp-flow-col.before::before{background:linear-gradient(90deg,#e11d48,#dc2626);}
+.mp-flow-col.after::before{background:linear-gradient(90deg,#10b981,#059669);}
+.mp-flow-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.mp-flow-stamp{font-family:'League Spartan',sans-serif;font-size:14px;font-weight:900;letter-spacing:3px;color:#fff;padding:5px 14px;border-radius:4px;}
+.mp-flow-stamp.rd{background:#e11d48;}
+.mp-flow-stamp.gn{background:#10b981;}
+.mp-flow-tag{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:100px;}
+.mp-flow-tag.rd{background:rgba(225,29,72,.12);color:#be123c;border:1px solid rgba(225,29,72,.25);}
+.mp-flow-tag.gn{background:rgba(16,185,129,.12);color:#047857;border:1px solid rgba(16,185,129,.25);}
+.mp-flow-steps{display:flex;flex-direction:column;gap:10px;}
+.mp-flow-step{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.9);border-radius:10px;padding:11px 13px;position:relative;backdrop-filter:blur(4px);}
+.mp-flow-step-n{font-family:'League Spartan',sans-serif;font-size:11px;font-weight:900;letter-spacing:1px;flex-shrink:0;width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;}
+.mp-flow-col.before .mp-flow-step-n{background:#e11d48;color:#fff;}
+.mp-flow-col.after .mp-flow-step-n{background:#10b981;color:#fff;}
+.mp-flow-step-body{flex:1;min-width:0;}
+.mp-flow-step-t{font-family:'League Spartan',sans-serif;font-size:13px;font-weight:800;color:#0f172a;letter-spacing:-.2px;line-height:1.2;}
+.mp-flow-step-s{font-size:11px;color:#64748b;line-height:1.45;margin-top:2px;}
+.mp-flow-step-ico{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;align-self:center;}
+.mp-flow-col.before .mp-flow-step-ico{background:rgba(225,29,72,.12);color:#e11d48;}
+.mp-flow-col.after .mp-flow-step-ico{background:rgba(16,185,129,.12);color:#10b981;}
+.mp-flow-step-badge{font-family:'League Spartan',sans-serif;font-size:8.5px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px;border-radius:4px;flex-shrink:0;align-self:flex-start;margin-top:1px;}
+.mp-flow-step-badge.warn{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;}
+.mp-flow-step-badge.ok{background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;}
+.mp-flow-step-badge.fix{background:linear-gradient(135deg,#10b981,#059669);color:#fff;box-shadow:0 2px 6px rgba(16,185,129,.35);border:1px solid rgba(16,185,129,.5);}
+.mp-flow-step-badge.same{background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1;}
+.mp-flow-step.warn-step{background:linear-gradient(135deg,rgba(225,29,72,.16),rgba(255,255,255,.85));border:1px solid rgba(225,29,72,.4);border-left:3px solid #e11d48;box-shadow:0 2px 10px rgba(225,29,72,.12);}
+.mp-flow-step.fix-step{background:linear-gradient(135deg,rgba(16,185,129,.16),rgba(255,255,255,.85));border:1px solid rgba(16,185,129,.4);border-left:3px solid #10b981;box-shadow:0 2px 10px rgba(16,185,129,.12);}
+.mp-flow-step.same-step{opacity:.55;background:rgba(255,255,255,.5);}
+.mp-flow-bridge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;}
+.mp-flow-bridge-line{flex:1;width:2px;background:linear-gradient(180deg,#e11d48 0%,#fbbf24 50%,#10b981 100%);border-radius:2px;min-height:40px;}
+.mp-flow-bridge-arrow{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff6b35,#ff4500);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 6px 16px rgba(255,69,0,.35);position:relative;}
+.mp-flow-bridge-arrow::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(255,69,0,.25);animation:mpPulse 2s ease-in-out infinite;}
+@keyframes mpPulse{0%,100%{transform:scale(1);opacity:.6;}50%{transform:scale(1.18);opacity:0;}}
+.mp-flow-bridge-lbl{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#ff4500;writing-mode:vertical-rl;transform:rotate(180deg);}
+
+/* Root Cause Resolution */
+.mp-rc{margin-top:24px;}
+.mp-rc-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+.mp-rc-card{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:0;overflow:hidden;position:relative;box-shadow:0 1px 3px rgba(15,23,42,.06);}
+.mp-rc-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#ff6b35,#ff4500);}
+.mp-rc-head{display:flex;align-items:center;justify-content:space-between;padding:18px 24px 16px;border-bottom:1px dashed #e2e8f0;}
+.mp-rc-head-l{display:flex;align-items:center;gap:14px;}
+.mp-rc-num{font-family:'League Spartan',sans-serif;font-size:38px;font-weight:900;color:#ff4500;line-height:1;letter-spacing:-2px;}
+.mp-rc-tag{display:flex;flex-direction:column;}
+.mp-rc-tag-l{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#94a3b8;}
+.mp-rc-tag-t{font-family:'League Spartan',sans-serif;font-size:17px;font-weight:800;color:#0f172a;line-height:1.1;letter-spacing:-.3px;}
+.mp-rc-status{display:flex;align-items:center;gap:6px;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:100px;padding:5px 12px;}
+.mp-rc-status-dot{width:8px;height:8px;border-radius:50%;background:#10b981;box-shadow:0 0 0 0 rgba(16,185,129,.5);animation:mpDot 1.8s ease-in-out infinite;}
+@keyframes mpDot{0%{box-shadow:0 0 0 0 rgba(16,185,129,.5);}70%{box-shadow:0 0 0 8px rgba(16,185,129,0);}100%{box-shadow:0 0 0 0 rgba(16,185,129,0);}}
+.mp-rc-status-l{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#047857;}
+.mp-rc-body{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;padding:22px 24px;}
+.mp-rc-info{display:flex;flex-direction:column;gap:12px;}
+.mp-rc-problem{background:#fef2f2;border:1px solid #fecaca;border-left:3px solid #e11d48;border-radius:8px;padding:11px 14px;}
+.mp-rc-problem-l{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#be123c;margin-bottom:3px;}
+.mp-rc-problem-t{font-size:12.5px;color:#1f2937;line-height:1.5;font-weight:600;}
+.mp-rc-arrow{display:flex;align-items:center;gap:8px;color:#94a3b8;font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;}
+.mp-rc-arrow::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#cbd5e1,transparent);}
+.mp-rc-sol{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);border-radius:10px;padding:14px 16px;color:#fff;}
+.mp-rc-sol-l{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#ff6b35;margin-bottom:4px;}
+.mp-rc-sol-t{font-family:'League Spartan',sans-serif;font-size:18px;font-weight:800;letter-spacing:-.3px;margin-bottom:6px;}
+.mp-rc-sol-d{font-size:12px;color:rgba(255,255,255,.7);line-height:1.55;}
+.mp-rc-feats{display:flex;flex-direction:column;gap:7px;margin-top:6px;}
+.mp-rc-feat{display:flex;align-items:center;gap:9px;padding:9px 12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;font-size:12px;color:#334155;font-weight:600;}
+.mp-rc-feat-ico{width:24px;height:24px;border-radius:6px;background:rgba(255,107,53,.12);color:#ff6b35;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* Visualization slot */
+.mp-rc-vis{display:flex;align-items:stretch;justify-content:center;}
+.mp-rc-imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;}
+.mp-rc-img{position:relative;background:#0f172a;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(15,23,42,.08);}
+.mp-rc-img img{width:100%;height:100%;min-height:200px;object-fit:cover;display:block;}
+.mp-rc-img-cap{padding:8px 12px;background:rgba(255,255,255,.95);border-top:1px solid #e2e8f0;font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#475569;text-align:center;}
+.mp-rc-img-ph{min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:rgba(255,255,255,.4);font-family:'Courier New',monospace;font-size:10px;}
+
+/* Mock: Web App window */
+.mp-mock-app{width:100%;background:#0a0f1e;border-radius:12px;overflow:hidden;border:1px solid rgba(255,107,53,.2);box-shadow:0 12px 32px rgba(0,0,0,.25);display:flex;flex-direction:column;}
+.mp-mock-chrome{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#0f172a;border-bottom:1px solid rgba(255,255,255,.05);}
+.mp-mock-chrome i{width:9px;height:9px;border-radius:50%;display:block;}
+.mp-mock-chrome i:nth-child(1){background:#ff5f57;}
+.mp-mock-chrome i:nth-child(2){background:#ffbd2e;}
+.mp-mock-chrome i:nth-child(3){background:#28ca41;}
+.mp-mock-chrome span{margin-left:8px;flex:1;background:rgba(255,255,255,.06);border-radius:4px;padding:3px 10px;font-family:'Courier New',monospace;font-size:10px;color:rgba(255,255,255,.55);letter-spacing:.3px;}
+.mp-mock-app-body{padding:14px;display:flex;flex-direction:column;gap:10px;flex:1;}
+.mp-mock-drop{display:flex;align-items:center;gap:10px;padding:14px;background:rgba(255,107,53,.06);border:1.5px dashed rgba(255,107,53,.35);border-radius:8px;}
+.mp-mock-drop-ico{width:36px;height:36px;border-radius:8px;background:rgba(255,107,53,.18);color:#ff8c42;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.mp-mock-drop-body{flex:1;min-width:0;}
+.mp-mock-drop-t{font-family:'League Spartan',sans-serif;font-size:12px;font-weight:800;color:#fff;letter-spacing:-.2px;}
+.mp-mock-drop-s{font-size:10.5px;color:rgba(255,255,255,.55);font-family:'Courier New',monospace;margin-top:2px;}
+.mp-mock-drop-cta{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#ff6b35,#ff4500);padding:6px 12px;border-radius:6px;}
+.mp-mock-prog{display:flex;align-items:center;gap:10px;}
+.mp-mock-prog-bar{flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden;}
+.mp-mock-prog-fill{height:100%;background:linear-gradient(90deg,#ff4500,#10b981);border-radius:100px;width:0;animation:mpFill 3.5s ease-out infinite;}
+@keyframes mpFill{0%{width:0;}60%,100%{width:100%;}}
+.mp-mock-prog-p{font-family:'Courier New',monospace;font-size:10px;color:#10b981;font-weight:700;}
+.mp-mock-log{background:#000;border-radius:6px;padding:10px 12px;font-family:'Courier New',monospace;font-size:10.5px;line-height:1.6;color:rgba(255,255,255,.8);}
+.mp-mock-log-row{display:flex;gap:6px;}
+.mp-mock-log-row::before{content:'>';color:#ff6b35;font-weight:700;}
+.mp-mock-log-row.ok{color:#34d399;}
+.mp-mock-log-row.ok::before{color:#34d399;content:'✓';}
+
+/* Mock: Scanner + Andon split */
+.mp-mock-split{width:100%;display:grid;grid-template-columns:1fr 1.3fr;gap:12px;}
+.mp-mock-scanner{background:#0a0f1e;border-radius:12px;overflow:hidden;border:1px solid rgba(56,189,248,.2);padding:14px;display:flex;flex-direction:column;gap:10px;align-items:center;}
+.mp-mock-scanner-h{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#38bdf8;}
+.mp-mock-scanner-frame{position:relative;width:120px;height:120px;background:radial-gradient(circle at 50% 50%,rgba(56,189,248,.06),transparent 70%),#000;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.mp-mock-scanner-frame::before,.mp-mock-scanner-frame::after,.mp-mock-scanner-frame > i.tl,.mp-mock-scanner-frame > i.tr,.mp-mock-scanner-frame > i.bl,.mp-mock-scanner-frame > i.br{content:'';position:absolute;width:20px;height:20px;border:2.5px solid #38bdf8;}
+.mp-mock-scanner-frame > i.tl{top:6px;left:6px;border-right:none;border-bottom:none;border-radius:6px 0 0 0;}
+.mp-mock-scanner-frame > i.tr{top:6px;right:6px;border-left:none;border-bottom:none;border-radius:0 6px 0 0;}
+.mp-mock-scanner-frame > i.bl{bottom:6px;left:6px;border-right:none;border-top:none;border-radius:0 0 0 6px;}
+.mp-mock-scanner-frame > i.br{bottom:6px;right:6px;border-left:none;border-top:none;border-radius:0 0 6px 0;}
+.mp-mock-scanner-line{position:absolute;left:14px;right:14px;height:2px;background:linear-gradient(90deg,transparent,#38bdf8,transparent);box-shadow:0 0 8px #38bdf8;animation:mpScan 2.2s ease-in-out infinite;}
+@keyframes mpScan{0%{top:14px;opacity:0;}10%,90%{opacity:1;}50%{top:calc(100% - 16px);}100%{top:14px;opacity:0;}}
+.mp-mock-qr{width:64px;height:64px;background:#fff;border-radius:4px;padding:6px;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(7,1fr);gap:1px;}
+.mp-mock-qr i{background:#0f172a;border-radius:1px;}
+.mp-mock-qr i.w{background:transparent;}
+.mp-mock-scanner-status{font-family:'Courier New',monospace;font-size:10.5px;color:#34d399;display:flex;align-items:center;gap:6px;}
+.mp-mock-scanner-status::before{content:'';width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 6px #10b981;animation:mpBlink 1s ease-in-out infinite;}
+@keyframes mpBlink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.mp-mock-andon{background:#0a0f1e;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;}
+.mp-mock-andon-h{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:#0f172a;border-bottom:1px solid rgba(255,255,255,.05);}
+.mp-mock-andon-h-l{font-family:'League Spartan',sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;color:#fff;display:flex;align-items:center;gap:6px;}
+.mp-mock-andon-h-l::before{content:'';width:7px;height:7px;border-radius:50%;background:#ef4444;animation:mpBlink 1.2s ease-in-out infinite;}
+.mp-mock-andon-h-r{font-family:'Courier New',monospace;font-size:9px;color:rgba(255,255,255,.5);}
+.mp-mock-andon-body{padding:8px;display:flex;flex-direction:column;gap:5px;flex:1;}
+.mp-mock-andon-row{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:7px 10px;border-radius:6px;font-family:'Courier New',monospace;font-size:10.5px;}
+.mp-mock-andon-row.ok{background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);}
+.mp-mock-andon-row.under{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);}
+.mp-mock-andon-row.late{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);}
+.mp-mock-andon-row.over{background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.25);}
+.mp-mock-andon-row span{color:rgba(255,255,255,.9);font-weight:700;}
+.mp-mock-andon-row strong{font-family:'League Spartan',sans-serif;font-weight:800;font-size:12px;}
+.mp-mock-andon-row.ok strong{color:#34d399;}
+.mp-mock-andon-row.under strong{color:#fbbf24;}
+.mp-mock-andon-row.late strong{color:#f87171;}
+.mp-mock-andon-row.over strong{color:#c084fc;}
+.mp-mock-andon-row i{font-style:normal;font-family:'League Spartan',sans-serif;font-size:9px;font-weight:900;letter-spacing:1.5px;padding:2px 7px;border-radius:3px;color:#0a0f1e;}
+.mp-mock-andon-row.ok i{background:#34d399;}
+.mp-mock-andon-row.under i{background:#fbbf24;}
+.mp-mock-andon-row.late i{background:#f87171;}
+.mp-mock-andon-row.over i{background:#c084fc;}
+
+/* Closing banner */
+.mp-closed{margin-top:36px;background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);border-radius:18px;padding:28px 36px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;position:relative;overflow:hidden;border:1px solid rgba(16,185,129,.2);}
+.mp-closed::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 10% 50%,rgba(16,185,129,.15),transparent 60%),radial-gradient(ellipse 50% 70% at 90% 50%,rgba(255,107,53,.12),transparent 60%);pointer-events:none;}
+.mp-closed-stamp{font-family:'League Spartan',sans-serif;font-size:13px;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:#fff;background:#10b981;padding:8px 16px;border-radius:6px;transform:rotate(-3deg);box-shadow:0 6px 16px rgba(16,185,129,.35);position:relative;z-index:1;}
+.mp-closed-body{position:relative;z-index:1;}
+.mp-closed-eyebrow{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:5px;}
+.mp-closed-t{font-family:'League Spartan',sans-serif;font-size:24px;font-weight:800;color:#fff;letter-spacing:-.4px;line-height:1.2;}
+.mp-closed-t em{font-style:normal;background:linear-gradient(135deg,#34d399,#10b981);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.mp-closed-s{font-size:12px;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.5;}
+.mp-closed-metric{position:relative;z-index:1;text-align:right;display:flex;flex-direction:column;gap:4px;}
+.mp-closed-metric-l{font-family:'League Spartan',sans-serif;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);}
+.mp-closed-metric-v{font-family:'League Spartan',sans-serif;font-size:38px;font-weight:800;background:linear-gradient(135deg,#34d399 0%,#10b981 100%);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;letter-spacing:-1px;}
+.mp-closed-metric-s{font-size:11px;color:rgba(255,255,255,.45);}
+
+@media (max-width:1100px){
+  .mp-newproc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px;}
+  .mp-newproc-step:nth-child(1),.mp-newproc-step:nth-child(2),.mp-newproc-step:nth-child(3),.mp-newproc-step:nth-child(4){transform:none;}
+  .mp-newproc-step:nth-child(2)::after,.mp-newproc-step:nth-child(2)::before{display:none;}
+  .mp-flow-grid{grid-template-columns:1fr;gap:14px;}
+  .mp-flow-bridge{flex-direction:row;}
+  .mp-flow-bridge-line{width:100%;height:2px;min-height:2px;}
+  .mp-flow-bridge-lbl{writing-mode:horizontal-tb;transform:none;}
+  .mp-rc-body{grid-template-columns:1fr;}
+}
+
+@media (max-width:700px){
+  .mp-newproc-shell{padding:18px;}
+  .mp-newproc-head{align-items:flex-start;flex-direction:column;}
+  .mp-newproc-grid{grid-template-columns:1fr;}
+  .mp-newproc-note{flex-direction:column;align-items:flex-start;}
+  .mp-newproc-step::after,.mp-newproc-step::before{display:none;}
+  .mp-newproc-step:nth-child(1),.mp-newproc-step:nth-child(2),.mp-newproc-step:nth-child(3),.mp-newproc-step:nth-child(4){transform:none;}
+  .mp-flow-col{padding:16px;}
+  .mp-flow-step{padding:10px 11px;}
+  .mp-rc-head,.mp-rc-body{padding-left:16px;padding-right:16px;}
+  .mp-rc-head{flex-direction:column;align-items:flex-start;gap:12px;}
+  .mp-rc-imgs,.mp-mock-split{grid-template-columns:1fr;}
+  .mp-closed{grid-template-columns:1fr;gap:18px;padding:22px 20px;}
+  .mp-closed-metric{text-align:left;}
+}
+
 /* ══════════════════════════════════════ §12 RESULTS ══════════════════════════════════════ */
 #results { background:#000; padding:90px 80px; position:relative; overflow:hidden; }
 #results::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(255,69,0,.07),transparent 60%);}
@@ -1486,7 +1803,7 @@ body.cmt-mode * { cursor:crosshair !important; }
 
     <!-- Products — individual image per product -->
     <div class="rv" style="margin-bottom:4px;">
-      <div style="font-family:'League Spartan',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#059669;margin-bottom:14px;display:flex;align-items:center;gap:8px;"><span style="display:block;width:16px;height:1.5px;background:#059669;"></span>Produk</div>
+      <div style="font-family:'League Spartan',sans-serif;font-size:28px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;color:#090c18;margin-bottom:14px;line-height:1;">Seatbelt Type</div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
         <!-- ELR -->
         <div style="background:#f8f7f5;border:1px solid #e0ddd7;border-radius:10px;overflow:hidden;position:relative;transition:transform .25s,box-shadow .25s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
@@ -1544,8 +1861,7 @@ body.cmt-mode * { cursor:crosshair !important; }
           <div style="position:absolute;bottom:0;left:0;padding:6px 10px 7px;font-family:'League Spartan',sans-serif;font-size:11px;font-weight:700;color:#090c18;text-transform:uppercase;letter-spacing:1px;">Mini Buckle</div>
         </div>
       </div>
-    </div>
-
+    </div> 
     <div class="co-card rv" style="background:#090c18;border-color:rgba(255,69,0,.2);border-width:2px;">
       <div class="co-cl or">Company Information</div>
       <div class="co-info-row" style="margin-top:8px;">
@@ -1553,8 +1869,7 @@ body.cmt-mode * { cursor:crosshair !important; }
         <div class="co-info-line" style="color:rgba(255,255,255,.65);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,140,66,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 9.07a19.79 19.79 0 01-3.07-8.67A2 2 0 013.44 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg><span>0313970301</span></div>
         <div class="co-info-line" style="color:rgba(255,255,255,.65);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,140,66,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg><span>admin@sungwoo.co.id</span></div>
       </div>
-    </div>
-   
+    </div> 
   </div>
 </section>
 
@@ -1563,13 +1878,10 @@ body.cmt-mode * { cursor:crosshair !important; }
   <div class="pb-hazard"></div>
   <div class="pb-inner">
     <div class="pb-tag rv">Latar Belakang</div>
-    <div style="display:flex;align-items:stretch;gap:60px;margin-top:32px;flex-wrap:wrap;">
-
+    <div style="display:flex;align-items:stretch;gap:60px;margin-top:32px;flex-wrap:wrap;"> 
       <!-- Left: title → SVG → body text -->
-      <div style="flex:1;min-width:300px;display:flex;flex-direction:column;gap:28px;">
-
-        <div style="font-family:'League Spartan',sans-serif;font-size:62px;font-weight:900;color:#ff4500;line-height:1;text-transform:uppercase;text-shadow:0 0 5px rgba(255,69,0,.7),0 0 10px rgba(255,69,0,.35);">Selisih PO dengan Aktual Pengiriman</div>
-
+      <div style="flex:1;min-width:300px;display:flex;flex-direction:column;gap:28px;"> 
+        <div style="font-family:'League Spartan',sans-serif;font-size:62px;font-weight:900;color:#ff4500;line-height:1;text-transform:uppercase;text-shadow:0 0 5px rgba(255,69,0,.7),0 0 10px rgba(255,69,0,.35);">Difference Between PO and Actual Receiving</div>
         <svg width="60%" viewBox="0 0 440 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- shelf lines -->
           <line x1="0" y1="68" x2="440" y2="68" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
@@ -1611,7 +1923,7 @@ body.cmt-mode * { cursor:crosshair !important; }
           <rect x="248" y="138" width="78" height="26" rx="6" fill="rgba(239,68,68,.18)" stroke="rgba(239,68,68,.55)" stroke-width="1"/>
           <text x="287" y="155" font-family="League Spartan,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="800">− 1 BOX</text>
         </svg>
-        <p style="font-family:'DM Sans',sans-serif;font-size:18px;color:rgba(255,255,255,.7);line-height:1.7;margin:0;">Pada Tanggal <strong style="color: white;">11 Augustus 2025</strong> ditemukan di <strong style="color:#fff;">Warehouse Gresik</strong> bahwa part number <strong style="color:#f59e0b;">BAG010007D</strong> memiliki stok aktual <strong style="color:#f59e0b;">14 box</strong>, tetapi yang tercatat oleh operator ada sebanyak <strong style="color:#f59e0b;">15 box.</strong> </p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:18px;color:rgba(255,255,255,.7);line-height:1.7;margin:0;">Pada Tanggal <strong style="color: white;">11 Augustus 2025</strong> ditemukan di <strong style="color:#fff;">Warehouse Gresik</strong> bahwa part number <strong style="color:#f59e0b;">BAG010007D</strong>, part name Hook dari supplier KW, memiliki stok aktual <strong style="color:#f59e0b;">14 box</strong>, tetapi yang tercatat oleh operator ada sebanyak <strong style="color:#f59e0b;">15 box.</strong> </p>
       </div>
 
       <!-- Right: big image placeholder -->
@@ -1630,39 +1942,28 @@ body.cmt-mode * { cursor:crosshair !important; }
     <div style="display:flex;align-items:flex-start;gap:48px;margin-bottom:8px;">
       <div style="flex:1;">
         <div class="sec-n-tag rv">Plan</div>
-        <h2 class="sec-n-h rv">Rencana Aktivitas</h2>
-        <p class="sec-n-s rv">Jadwal pelaksanaan mengikuti siklus PDCA dengan durasi total ±3 bulan.</p>
-      </div>
-      <svg style="flex-shrink:0;width:160px;height:160px;opacity:.75;" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="80" cy="80" r="68" stroke="rgba(255,255,255,.06)" stroke-width="2" fill="none"/>
-        <path d="M80 80 L80 14 A66 66 0 0 1 146 80 Z" fill="rgba(96,165,250,.15)" stroke="rgba(96,165,250,.3)" stroke-width="1"/>
-        <path d="M80 80 L146 80 A66 66 0 0 1 80 146 Z" fill="rgba(251,191,36,.12)" stroke="rgba(251,191,36,.3)" stroke-width="1"/>
-        <path d="M80 80 L80 146 A66 66 0 0 1 14 80 Z" fill="rgba(52,211,153,.12)" stroke="rgba(52,211,153,.3)" stroke-width="1"/>
-        <path d="M80 80 L14 80 A66 66 0 0 1 80 14 Z" fill="rgba(167,139,250,.12)" stroke="rgba(167,139,250,.3)" stroke-width="1"/>
-        <circle cx="80" cy="80" r="18" fill="#0f172a" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/>
-        <text x="80" y="76" font-family="League Spartan,sans-serif" font-size="8" fill="rgba(255,255,255,.6)" text-anchor="middle" font-weight="700">PDCA</text>
-        <text x="80" y="87" font-family="DM Sans,sans-serif" font-size="6" fill="rgba(255,255,255,.3)" text-anchor="middle">CYCLE</text>
-        <text x="107" y="50" font-family="League Spartan,sans-serif" font-size="13" fill="#60a5fa" text-anchor="middle" font-weight="800">P</text>
-        <text x="118" y="107" font-family="League Spartan,sans-serif" font-size="13" fill="#fbbf24" text-anchor="middle" font-weight="800">D</text>
-        <text x="53" y="120" font-family="League Spartan,sans-serif" font-size="13" fill="#34d399" text-anchor="middle" font-weight="800">C</text>
-        <text x="42" y="56" font-family="League Spartan,sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle" font-weight="800">A</text>
-      </svg>
+        <h2 class="sec-n-h rv">Activity Plan</h2>
+       </div>
+    
     </div>
     <div class="tl-table rv">
       <div class="tl-head-row">
-        <span></span>
+        <span>PDCA</span>
         <span>No</span>
         <span>Aktivitas</span>
-        <div class="tl-week-cols"><span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span><span>M7</span><span>M8</span><span>M9</span><span>M10</span><span>M11</span><span>M12</span></div>
+        <div>
+          <div class="tl-month-cols"><span>October</span><span>November</span><span>December</span></div>
+          <div class="tl-week-cols"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span><span>Week 5</span><span>Week 6</span><span>Week 7</span><span>Week 8</span><span>Week 9</span><span>Week 10</span><span>Week 11</span><span>Week 12</span></div>
+        </div>
       </div>
-      <div class="tl-r"><span class="pb pb-p">P</span><span style="color:rgba(255,255,255,.3);font-size:12px;">1</span><span class="tl-act">Pemilihan Tema</span><div class="bars-wrap"><div class="bar-p" style="left:0;width:0" data-w="8.33%"></div><div class="bar-a" style="left:0;width:0" data-w="16%"></div></div></div>
-      <div class="tl-r"><span class="pb pb-p">P</span><span style="color:rgba(255,255,255,.3);font-size:12px;">2</span><span class="tl-act">Identifikasi / Analisa Kondisi</span><div class="bars-wrap"><div class="bar-p" style="left:8.33%;width:0" data-w="8.33%"></div><div class="bar-a" style="left:16%;width:0" data-w="8.5%"></div></div></div>
-      <div class="tl-r"><span class="pb pb-p">P</span><span style="color:rgba(255,255,255,.3);font-size:12px;">3</span><span class="tl-act">Penetapan Target</span><div class="bars-wrap"><div class="bar-p" style="left:16.67%;width:0" data-w="8.33%"></div><div class="bar-a" style="left:24.5%;width:0" data-w="8%"></div></div></div>
-      <div class="tl-r"><span class="pb pb-p">P</span><span style="color:rgba(255,255,255,.3);font-size:12px;">4</span><span class="tl-act">Analisa Kondisi yang Ada</span><div class="bars-wrap"><div class="bar-p" style="left:25%;width:0" data-w="8.33%"></div><div class="bar-a" style="left:32.5%;width:0" data-w="8.5%"></div></div></div>
-      <div class="tl-r"><span class="pb pb-d">D</span><span style="color:rgba(255,255,255,.3);font-size:12px;">5</span><span class="tl-act">Merencanakan Penanggulangan</span><div class="bars-wrap"><div class="bar-p" style="left:33.33%;width:0" data-w="16.67%"></div><div class="bar-a" style="left:41%;width:0" data-w="17%"></div></div></div>
-      <div class="tl-r"><span class="pb pb-d">D</span><span style="color:rgba(255,255,255,.3);font-size:12px;">6</span><span class="tl-act">Melakukan Penanggulangan</span><div class="bars-wrap"><div class="bar-p" style="left:50%;width:0" data-w="25%"></div><div class="bar-a" style="left:58%;width:0" data-w="25%"></div></div></div>
-      <div class="tl-r"><span class="pb pb-c">C</span><span style="color:rgba(255,255,255,.3);font-size:12px;">7</span><span class="tl-act">Evaluasi Hasil</span><div class="bars-wrap"><div class="bar-p" style="left:75%;width:0" data-w="16.67%"></div><div class="bar-a" style="left:83%;width:0" data-w="15%"></div></div></div>
-      <div class="tl-r"><span class="pb pb-a">A</span><span style="color:rgba(255,255,255,.3);font-size:12px;">8</span><span class="tl-act">Standarisasi Dan Tindak Lanjut</span><div class="bars-wrap"><div class="bar-p" style="left:91.67%;width:0" data-w="8.33%"></div><div class="bar-a" style="left:93%;width:0" data-w="7%"></div></div></div>
+      <div class="tl-r"><span class="pb pb-p">P</span><span style="color:rgba(255,255,255,.3);font-size:12px;">1</span><span class="tl-act">Pemilihan Tema</span><div class="bars-wrap"><div class="bar-p" style="left:0;width:0" data-w="8.33%"></div><div class="bar-a" style="left:0;width:0" data-w="8.5%"></div></div></div>
+      <div class="tl-r"><span class="pb pb-p">P</span><span style="color:rgba(255,255,255,.3);font-size:12px;">2</span><span class="tl-act">Identifikasi / Analisa Kondisi</span><div class="bars-wrap"><div class="bar-p" style="left:8.33%;width:0" data-w="8.33%"></div><div class="bar-a" style="left:8.5%;width:0" data-w="8.5%"></div></div></div>
+      <div class="tl-r"><span class="pb pb-p">P</span><span style="color:rgba(255,255,255,.3);font-size:12px;">3</span><span class="tl-act">Penetapan Target</span><div class="bars-wrap"><div class="bar-p" style="left:16.67%;width:0" data-w="8.33%"></div><div class="bar-a" style="left:16.5%;width:0" data-w="8.5%"></div></div></div>
+      <div class="tl-r"><span class="pb pb-p">P</span><span style="color:rgba(255,255,255,.3);font-size:12px;">4</span><span class="tl-act">Analisa Kondisi yang Ada</span><div class="bars-wrap"><div class="bar-p" style="left:25%;width:0" data-w="8.33%"></div><div class="bar-a" style="left:25%;width:0" data-w="8.5%"></div></div></div>
+      <div class="tl-r"><span class="pb pb-d">D</span><span style="color:rgba(255,255,255,.3);font-size:12px;">5</span><span class="tl-act">Merencanakan Penanggulangan</span><div class="bars-wrap"><div class="bar-p" style="left:33.33%;width:0" data-w="21%"></div><div class="bar-a" style="left:33.3%;width:0" data-w="25%"></div></div></div>
+      <div class="tl-r"><span class="pb pb-d">D</span><span style="color:rgba(255,255,255,.3);font-size:12px;">6</span><span class="tl-act">Melakukan Penanggulangan</span><div class="bars-wrap"><div class="bar-p" style="left:54%;width:0" data-w="25%"></div><div class="bar-a" style="left:59%;width:0" data-w="25%"></div></div></div>
+      <div class="tl-r"><span class="pb pb-c">C</span><span style="color:rgba(255,255,255,.3);font-size:12px;">7</span><span class="tl-act">Evaluasi Hasil</span><div class="bars-wrap"><div class="bar-p" style="left:79.17%;width:0" data-w="12.5%"></div><div class="bar-a" style="left:85%;width:0" data-w="7%"></div></div></div>
+      <div class="tl-r"><span class="pb pb-a">A</span><span style="color:rgba(255,255,255,.3);font-size:12px;">8</span><span class="tl-act">Standarisasi Dan Tindak Lanjut</span><div class="bars-wrap"><div class="bar-p" style="left:91.67%;width:0" data-w="8.33%"></div><div class="bar-a" style="left:92%;width:0" data-w="8%"></div></div></div>
     </div>
     <div class="tl-leg rv"><div class="lg"><div class="lg-b" style="background:rgba(96,165,250,.35);"></div>Plan</div><div class="lg"><div class="lg-b" style="background:linear-gradient(90deg,#ff4500,#ff8c42);"></div>Actual</div><div style="margin-left:auto;font-size:12px;color:rgba(255,255,255,.2);">Total durasi: ±3 bulan</div></div>
   </div>
@@ -1672,115 +1973,80 @@ body.cmt-mode * { cursor:crosshair !important; }
 <section id="process">
   <div class="pr-inner">
     <div class="sec-o-tag rv">Pemilihan Tema</div>
-    <h2 class="sec-o-h rv">Alur Proses Penerimaan Material</h2>
-     <!-- Fixed 1200px container. Center(600,380). Hex radius 200px flat-top. All positions in absolute px. -->
-    <div class="pr-circle-wrap rv">
-      <!-- SVG spans full 1200×760 container -->
-      <svg viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" class="pr-anim-hidden" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;">
-        <line x1="600" y1="380" x2="470" y2="230" stroke="rgba(56,189,248,.35)" stroke-width="1.5" stroke-dasharray="5,5"/>
-        <line x1="600" y1="380" x2="720" y2="230" stroke="rgba(255,107,53,.22)" stroke-width="1.5" stroke-dasharray="5,5"/>
-        <line x1="600" y1="365" x2="760" y2="365" stroke="rgba(255,107,53,.22)" stroke-width="1.5" stroke-dasharray="5,5"/>
-        <line x1="600" y1="380" x2="710" y2="505" stroke="rgba(56,189,248,.35)" stroke-width="1.5" stroke-dasharray="5,5"/>
-        <line x1="600" y1="380" x2="470" y2="505" stroke="rgba(56,189,248,.35)" stroke-width="1.5" stroke-dasharray="5,5"/>
-        <line x1="600" y1="365" x2="440" y2="365" stroke="rgba(255,107,53,.22)" stroke-width="1.5" stroke-dasharray="5,5"/>
-        <circle cx="600" cy="365" r="70" fill="none" stroke="rgba(255,107,53,.06)" stroke-width="1.5"/>
-      </svg>
-
-      <!-- Center hub at (600,380) -->
-      <div class="pr-center-hub pr-anim-hidden" style="left:600px;top:365px;"><span>Alur<br>Proses</span></div>
-
-      <!-- Position: top-left → Step 06 content (rotated CW by 1) -->
-      <div class="pr-step pr-anim-hidden" style="left:443px;top:213px;">
-        <div class="pr-node" style="box-shadow:0 0 14px rgba(56,189,248,.15);"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/></svg><span class="pr-node-icon ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
-        <div class="pr-label"><div class="pr-label-num">06</div><div class="pr-label-text">Surat Laporan</div></div>
-      </div>
-      <div class="pr-dc pr-anim-hidden" style="left:30px;top:100px;">
-        <div class="pr-dc-img"><img src="step-06.png" alt="Step 06" onerror="this.style.opacity='0.3'"></div>
-        <div class="pr-dc-body">
-          <div class="pr-dc-num-badge">STEP 06</div>
-          <div class="pr-dc-title">Membuat Surat LPB</div>
-          <div class="pr-dc-desc">Pembuatan surat Laporan Penerimaan Barang (LPB) di program vendor Sungwoo.</div>
+    <h2 class="sec-n-h rv">Material Receiving Process Flow</h2>
+    <div class="ic-overlay" id="icOverlay">
+      <div style="display:flex;flex-direction:row;align-items:flex-start;gap:24px;max-width:90vw;">
+        <div class="ic-a4">
+          <img src="incoming-checklist.png" alt="Incoming Checklist" onerror="this.parentElement.innerHTML='<div class=\'ic-placeholder\'>incoming-checklist.png</div>'">
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:20px 22px;max-width:320px;font-family:'DM Sans',sans-serif;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.85);align-self:center;">
+          <span style="font-family:'League Spartan',sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fb923c;display:block;margin-bottom:8px;">Incoming Checklist</span>
+          Incoming Checklist adalah dokumen yang dibuat oleh Staff WHS menggunakan PO Supplier sebagai alat pencocokan untuk operator penghitung jumlah box yang dikirim oleh supplier.
         </div>
       </div>
+    </div>
+    <div class="pr-arrow-row rv">
 
-      <!-- Position: top-right → Step 01 content — PROBLEMATIC -->
-      <div class="pr-step pr-anim-hidden" style="left:745px;top:213px;">
-        <div class="pr-node" style="border-color:rgba(255,69,0,.7);background:rgba(255,69,0,.1);"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ff4500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg><span class="pr-node-icon warn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span></div>
-        <div class="pr-label"><div class="pr-label-num" style="color:#ff4500;">01</div><div class="pr-label-text" style="color:rgba(255,100,50,.8);">Pencatatan Manual</div></div>
-      </div>
-      <div class="pr-dc problem pr-anim-hidden" style="left:815px;top:70px;">
-        <div class="pr-dc-body">
-          <div class="pr-dc-num-badge">STEP 01</div>
-          <div class="pr-dc-title">Pencatatan Manual</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:5px;">
-            <div class="pr-dc-warn" style="margin-bottom:0;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Resiko Kesalahan Catat</div>
-            <div class="pr-dc-warn" style="margin-bottom:0;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> CT 71 dtk</div>
+      <!-- Step 01 — Pencatatan Manual (WARN) -->
+      <div class="pr-arrow warn">
+        <div class="pr-arrow-inner">
+          <div class="pr-arrow-img"><img src="step-03.png" alt="" onerror="this.style.display='none'"></div>
+          <div class="pr-arrow-badge"><div class="pr-arrow-badge-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>Warning</div>
+          <div class="pr-arrow-content">
+            <div class="pr-arrow-num-row"><div class="pr-arrow-num">01</div><div class="pr-arrow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff4500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div></div>
+            <div class="pr-arrow-title">Pencatatan Manual</div>
+            <div class="pr-arrow-desc">Staff WHS membuat Incoming Checklist dari PO Supplier yang diterbitkan PPIC secara manual via Excel. <strong style="color:#ff6b35;"><br>Masalah:</strong> Dapat terjadi kesalahan ketik.</div>
+            <div class="pr-arrow-pills"><span class="pr-arrow-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg> Resiko Salah Catat</span></div>
           </div>
-          <div class="pr-dc-desc">Membuat Incoming Checklist secara manual berdasarkan PO Supplier</div>
-        </div>
-        <div class="pr-dc-img"><img src="step-03.png" alt="Step 03" onerror="this.style.opacity='0.3'"></div>
-      </div>
-
-      <!-- Position: pure right → Step 02 content — PROBLEMATIC -->
-      <div class="pr-step pr-anim-hidden" style="left:800px;top:380px;">
-        <div class="pr-node" style="border-color:rgba(255,69,0,.7);background:rgba(255,69,0,.1);"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ff4500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg><span class="pr-node-icon warn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span></div>
-        <div class="pr-label"><div class="pr-label-num" style="color:#ff4500;">02</div><div class="pr-label-text" style="color:rgba(255,100,50,.8);">Incoming Check</div></div>
-      </div>
-      <div class="pr-dc problem pr-anim-hidden" style="left:861px;top:288px;">
-        <div class="pr-dc-img"><img src="step-04.png" alt="Step 04" onerror="this.style.opacity='0.3'"></div>
-        <div class="pr-dc-body">
-          <div class="pr-dc-num-badge">STEP 02</div>
-          <div class="pr-dc-title">Cetak Incoming Check</div>
-          <div class="pr-dc-warn"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 86 dtk — Admin terlama</div>
-          <div class="pr-dc-desc">Incoming Check di Cetak tiap kedatangan — 86 dtk, porsi terbesar dari CT 157 dtk.</div>
         </div>
       </div>
 
-      <!-- Position: bot-right → Step 03 content -->
-      <div class="pr-step pr-anim-hidden" style="left:740px;top:572px;">
-        <div class="pr-node" style="box-shadow:0 0 14px rgba(56,189,248,.15);"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span class="pr-node-icon ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
-        <div class="pr-label"><div class="pr-label-num">03</div><div class="pr-label-text">Supplier Kirim</div></div>
-      </div>
-      <div class="pr-dc pr-anim-hidden" style="left:800px;top:500px;">
-        <div class="pr-dc-body">
-          <div class="pr-dc-num-badge">STEP 03</div>
-          <div class="pr-dc-title">Supplier Kirim</div>
-          <div class="pr-dc-desc">Supplier tiba di area penerimaan membawa surat jalan dan material.</div>
-        </div>
-        <div class="pr-dc-img"><img src="step-01.png" alt="Step 01" onerror="this.style.opacity='0.3'"></div>
-      </div>
-
-      <!-- Position: bot-left → Step 04 content -->
-      <div class="pr-step pr-anim-hidden" style="left:450px;top:560px;">
-        <div class="pr-node" style="box-shadow:0 0 14px rgba(56,189,248,.15);"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg><span class="pr-node-icon ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
-        <div class="pr-label"><div class="pr-label-num">04</div><div class="pr-label-text">Cek Surat Jalan</div></div>
-      </div>
-      <div class="pr-dc pr-anim-hidden" style="left:45px;top:495px;">
-        <div class="pr-dc-body">
-          <div class="pr-dc-num-badge">STEP 04</div>
-          <div class="pr-dc-title">Cek Surat Jalan</div>
-          <div class="pr-dc-desc">Checker mencocokan antara Incoming Checklist dengan surat jalan.</div>
-        </div>
-        <div class="pr-dc-img"><img src="step-02.png" alt="Step 02" onerror="this.style.opacity='0.3'"></div>
-      </div>
-
-      <!-- Position: pure left → Step 05 content -->
-      <div class="pr-step pr-anim-hidden" style="left:400px;top:380px;">
-        <div class="pr-node" style="border-color:rgba(255,69,0,.7);background:rgba(255,69,0,.1);"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ff4500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="pr-node-icon warn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span></div>
-        <div class="pr-label"><div class="pr-label-num" style="color:#ff4500;">05</div><div class="pr-label-text" style="color:rgba(255,100,50,.8);">Validasi Kuantitas</div></div>
-      </div>
-      <div class="pr-dc problem pr-anim-hidden" style="left:px;top:278px;">
-        <div class="pr-dc-img"><img src="step-05.png" alt="Step 05" onerror="this.style.opacity='0.3'"></div>
-        <div class="pr-dc-body">
-          <div class="pr-dc-num-badge">STEP 05</div>
-          <div class="pr-dc-title">Validasi Kuantitas</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:5px;">
-            <div class="pr-dc-warn" style="margin-bottom:0;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Resiko Salah Hitung</div>
-            <div class="pr-dc-warn" style="margin-bottom:0;"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> CT 2,04 dtk/box</div>
+      <!-- Step 02 — Supplier Kirim (OK) -->
+      <div class="pr-arrow ok">
+        <div class="pr-arrow-inner">
+          <div class="pr-arrow-img"><img src="step-01.png" alt="" onerror="this.style.display='none'"></div>
+          <div class="pr-arrow-badge"><div class="pr-arrow-badge-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>OK</div>
+          <div class="pr-arrow-content">
+            <div class="pr-arrow-num-row"><div class="pr-arrow-num">02</div><div class="pr-arrow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div></div>
+            <div class="pr-arrow-title">WHS menerima material</div>
+            <div class="pr-arrow-desc">Supplier tiba di area penerimaan membawa surat jalan dan material.</div>
           </div>
-          <div class="pr-dc-desc">Jumlah barang dihitung dan dicocokkan manual dengan Incoming Check.</div>
         </div>
       </div>
+
+      <!-- Step 03 — Validasi Kuantitas (WARN) -->
+      <div class="pr-arrow warn">
+        <div class="pr-arrow-inner">
+          <div class="pr-arrow-img"><img src="step-05.png" alt="" onerror="this.style.display='none'"></div>
+          <div class="pr-arrow-badge"><div class="pr-arrow-badge-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>Warning</div>
+          <div class="pr-arrow-content">
+            <div class="pr-arrow-num-row"><div class="pr-arrow-num">03</div><div class="pr-arrow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff4500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div></div>
+            <div class="pr-arrow-title">Validasi Kuantitas</div>
+            <div class="pr-arrow-desc">Jumlah box per partnumber dicatat secara manual oleh operator dan dicocokkan dengan Incoming Checklist. <strong style="color:#ff6b35;"><br>Masalah:</strong> Dapat terjadi kesalahan hitung jumlah box.</div>
+            <div class="pr-arrow-pills"><span class="pr-arrow-pill"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg> Resiko Salah Hitung</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 04 — Surat Laporan (OK) -->
+      <div class="pr-arrow ok">
+        <div class="pr-arrow-inner">
+          <div class="pr-arrow-img"><img src="step-06.png" alt="" onerror="this.style.display='none'"></div>
+          <div class="pr-arrow-badge"><div class="pr-arrow-badge-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>OK</div>
+          <div class="pr-arrow-content">
+            <div class="pr-arrow-num-row"><div class="pr-arrow-num">04</div><div class="pr-arrow-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/></svg></div></div>
+            <div class="pr-arrow-title">Laporan Penerimaan Barang</div>
+            <div class="pr-arrow-desc">Pembuatan surat Laporan Penerimaan Barang (LPB) di program vendor Sungwoo.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="pr-ic-wrap rv">
+      <button class="ic-btn" id="icBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        Incoming Checklist
+      </button>
     </div>
   </div>
 </section>
@@ -1789,74 +2055,51 @@ body.cmt-mode * { cursor:crosshair !important; }
 <section id="process-detail">
   <div class="pd-inner">
     <div class="sec-n-tag rv">Pemilihan Tema</div>
-    <h2 class="sec-n-h rv">Identifikasi Masalah pada Proses</h2>
-
-    <div class="pd-split stg" style="grid-template-columns:1fr 1fr 1fr;">
+    <h2 class="sec-n-h rv">Problem Identification</h2>
+ 
+    <div class="pd-board">
+      <div class="pd-split stg">
       <!-- Card 1: Pencatatan Manual (Step 3) -->
       <div class="pd-card rv lft">
         <div class="pd-card-head">
           <span class="pd-step-badge">Langkah 1</span>
           <div class="pd-step-name">Pencatatan Manual</div>
         </div>
+        <div class="pd-media">
+          <img src="step-03.PNG" alt="Pencatatan Manual" style="object-position:center 40%;" onerror="this.parentElement.innerHTML='<div class=&quot;pd-media-ph&quot;>step-03.PNG</div>'">
+        </div>
         <div class="pd-card-body">
           <div class="pd-problem-pill">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             Resiko Salah Catat
           </div>
-          <p class="pd-desc">Perhitungan jumlah penerimaan dilakukan secara manual oleh operator dikarenakan human error.</p>
-          <table class="pd-tbl">
-            <tr><td>Harga per Unit</td><td class="td-r">Rp 50.000</td></tr>
-            <tr><td>Biaya Penanganan Shortage</td><td class="td-r">Rp 150.000</td></tr>
-            <tr><td>Total Kerugian Per Kasus</td><td class="td-r">Rp 200.000</td></tr>
-            <tr><td>Estimasi Kasus per Bulan</td><td class="td-r">1 Kasus</td></tr>
-            <tr><td>Kerugian Per Bulan</td><td class="td-r">Rp 200.000</td></tr>
-          </table>
-          <div style="margin-top:12px;font-size:12px;color:rgba(255,85,85,.7);background:rgba(255,85,85,.07);border-radius:7px;padding:9px 12px;line-height:1.6;">Kesalahan hitung manual → asumsi kerugian <strong style="color:#f87171;">Rp 200.000 per kasus</strong></div>
-        </div>
+          <p class="pd-desc">Incoming Checklist dibuat staff WHS dari PO Supplier secara manual via Excel. Pada langkah ini masih ada potensi human error saat mengetik jumlah, part number, atau data penerimaan lainnya.</p>
+          <div class="pd-note"><strong>Temuan proses:</strong> Dokumen kontrol awal belum tervalidasi sistem, sehingga kesalahan pada input manual dapat ikut terbawa ke proses receiving berikutnya.</div>
+           </div>
       </div>
 
-      <!-- Card 2: Proses Administrasi (Step 4 CT data) -->
-      <div class="pd-card rv">
-        <div class="pd-card-head">
-          <span class="pd-step-badge">Langkah 2</span>
-          <div class="pd-step-name">Proses Administrasi</div>
-        </div>
-        <div class="pd-card-body">
-          <div class="pd-problem-pill">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Waktu Proses Terlalu Lama
-          </div>
-          <p class="pd-desc">Proses Incoming Checklist <strong style="color:#dc2626;">dilakukan perkedatangan supplier per hari.</strong></p>
-          <div class="pd-ct-row"><span class="pd-ct-label">Buka File Supplier Delivery Schedule</span><span class="pd-ct-val">35 dtk</span></div>
-          <div class="pd-ct-row"><span class="pd-ct-label">Input ke Incoming Check</span><span class="pd-ct-val">36 dtk</span></div>
-          <div class="pd-ct-row"><span class="pd-ct-label">Print Incoming Checklist untuk Validasi QTY</span><span class="pd-ct-val">86 dtk</span></div>
-          <div class="pd-big-ct">
-            <div class="pd-big-ct-num">3.454</div>
-            <div class="pd-big-ct-unit">detik / bulan</div>
-          </div>
-        </div>
-      </div>
+     
 
       <!-- Card 3: Validasi Kuantitas (Step 5) -->
       <div class="pd-card rv rgt">
         <div class="pd-card-head">
-          <span class="pd-step-badge">Langkah 5</span>
+          <span class="pd-step-badge">Langkah 3</span>
           <div class="pd-step-name">Validasi Kuantitas</div>
+        </div>
+        <div class="pd-media">
+          <img src="step-05.PNG" alt="Validasi Kuantitas" onerror="this.parentElement.innerHTML='<div class=&quot;pd-media-ph&quot;>step-05.PNG</div>'">
         </div>
         <div class="pd-card-body">
           <div class="pd-problem-pill">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             Resiko Salah Hitung
           </div>
-          <p class="pd-desc">Jumlah barang dihitung dan dicocokkan secara <strong style="color:#dc2626;">manual</strong> antara incoming checklist dengan aktual.</p>
-          <table class="pd-tbl">
-            <tr><td>CT Process</td><td class="td-r">2,04 dtk/box</td></tr>
-            <tr><td>Rata-rata Parts/Hari</td><td class="td-r">1.524 box/hari</td></tr>
-            <tr><td>CT Harian</td><td class="td-r">3.109,0 dtk/hari</td></tr>
-          </table>
-         </div>
+          <p class="pd-desc">Jumlah box per part number dicatat dan dicocokkan secara manual antara Incoming Checklist dengan aktual kedatangan. Tidak ada validasi otomatis sehingga operator rentan salah hitung.</p>
+          <div class="pd-note"><strong>Temuan proses:</strong> Kasus BAG010007D menunjukkan stok aktual 14 box tetapi tercatat 15 box oleh operator, sehingga terjadi gap 1 box pada saat penerimaan.</div>
+        
       </div>
-    </div> 
+      </div> 
+    </div>
   </div>
 </section>
 
@@ -1864,7 +2107,7 @@ body.cmt-mode * { cursor:crosshair !important; }
 <section id="theme-section">
   <div class="th-inner">
     <div class="sec-w-tag">Pemilihan Tema</div>
-    <h2 class="sec-w-h rv">Kesimpulan Tema</h2>
+    <h2 class="sec-w-h rv">Theme Conclusion</h2>
 
     <div class="th-board rv">
 
@@ -1879,15 +2122,11 @@ body.cmt-mode * { cursor:crosshair !important; }
             <div class="th-ev-title">Pencatatan Manual</div>
             <div class="th-ev-desc">Incoming material dicatat manual via checklist — rawan <strong style="color:#c0392b;">kesalahan catat.</strong></div>
           </div>
-          <div class="th-ev-card am">
-            <div class="th-ev-step">Langkah 2</div>
-            <div class="th-ev-title">Cycle Time Panjang</div>
-            <div class="th-ev-desc">Cetak Incoming Check butuh <strong style="color:#c0392b;">86 detik</strong> per supplier per kedatangan.</div>
-          </div>
+           
           <div class="th-ev-card bl">
-            <div class="th-ev-step">Langkah 5</div>
-            <div class="th-ev-title">Validasi Kuantitas Tidak Akurat</div>
-            <div class="th-ev-desc">Jumlah barang dihitung secara <strong style="color:#c0392b;">manual</strong>  tanpa sistem validasi otomatis dan dapat menyebabkan shortage.</div>
+            <div class="th-ev-step">Langkah 3</div>
+            <div class="th-ev-title">Validasi Kuantitas</div>
+            <div class="th-ev-desc">Pencocokan jumlah box dengan Incoming Checklist masih manual, sehingga rawan <strong style="color:#1a5a9e;">salah hitung.</strong></div>
           </div>
         </div>
 
@@ -1896,8 +2135,7 @@ body.cmt-mode * { cursor:crosshair !important; }
           <svg viewBox="0 0 80 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:80px;height:220px;overflow:visible;">
             <!-- strings from 3 cards to verdict -->
             <path d="M0,40 Q40,40 80,110" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3" opacity=".7"/>
-            <path d="M0,110 L80,110" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3" opacity=".7"/>
-            <path d="M0,180 Q40,180 80,110" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3" opacity=".7"/>
+             <path d="M0,180 Q40,180 80,110" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3" opacity=".7"/>
             <!-- dot at convergence -->
             <circle cx="80" cy="110" r="4" fill="#c0392b" opacity=".8"/>
           </svg>
@@ -1906,7 +2144,7 @@ body.cmt-mode * { cursor:crosshair !important; }
         <!-- RIGHT: verdict sticky note -->
         <div class="th-verdict">
           <div class="th-verdict-tag">Problem Statement</div>
-          <div class="th-verdict-text">Proses penerimaan masih <em>manual</em>, dengan <em>CT panjang</em> &amp; <em>akurasi rendah</em>.</div>
+          <div class="th-verdict-text">Pencatatan &amp; validasi kuantitas <em>manual</em> &amp; <em>akurasi rendah</em>.</div>
           <div class="th-verdict-rule"></div>
           <div class="th-verdict-sub">Stok aktual <strong>14 box</strong>, tercatat operator <strong>15 box</strong><br>Part: <strong>BAG010007D</strong> — 11 Agustus 2025<br>Gap 1 box → human error hitung manual.</div>
         </div>
@@ -1946,17 +2184,16 @@ body.cmt-mode * { cursor:crosshair !important; }
   </svg>
   <div class="tg-inner">
     <div class="sec-w-tag">Plan</div>
-    <h2 class="sec-w-h rv">Penetapan Target SMART</h2>
-    <p class="sec-w-s rv" style="color:#888;">Efisiensi Proses Administrasi Penerimaan Barang.</p>
-    <div class="sm2-grid rv">
+    <h2 class="sec-w-h rv">SMART Target Setting</h2>
+     <div class="sm2-grid rv">
       <div class="sm2-card sm2-s">
         <div class="sm2-watermark">S</div>
         <div class="sm2-tag">Specific</div>
         <div class="sm2-key">Spesifik</div>
-        <div class="sm2-desc">Fokus pada pengurangan waktu proses administrasi penerimaan barang dan validasi kedatangan.</div>
+        <div class="sm2-desc">Menghilangkan kesalahan hitung pada proses penerimaan barang di area warehouse.</div>
         <div class="sm2-metric">
           <div class="sm2-metric-label">Fokus Area</div>
-          <div class="sm2-metric-val">Waktu Admin + Validasi Kuantitas</div>
+          <div class="sm2-metric-val" style="font-size:13px">Akurasi Validasi Kuantitas</div>
         </div>
       </div>
 
@@ -1964,10 +2201,10 @@ body.cmt-mode * { cursor:crosshair !important; }
         <div class="sm2-watermark">M</div>
         <div class="sm2-tag">Measurable</div>
         <div class="sm2-key">Terukur</div>
-        <div class="sm2-desc">Target pengurangan CT yang terukur dengan angka konkret.</div> 
+        <div class="sm2-desc">Menurunkan target kesalahan hitung pada proses Incoming Warehouse menjadi Nol.</div>
         <div class="sm2-metric">
-          <div class="sm2-metric-label">Target CT</div>
-          <div class="sm2-metric-val">Admin: 157 → 100 dtk <span style="font-size:11px;font-weight:600;opacity:.75;">Hitung Box: 2,04 → 1,5 dtk/box</span></div>
+          <div class="sm2-metric-label">Selisih Hitung</div>
+          <div class="sm2-metric-val">1 kasus → 0 kasus</div>
         </div>
       </div>
 
@@ -1977,7 +2214,7 @@ body.cmt-mode * { cursor:crosshair !important; }
         <div class="sm2-key">Dapat Dicapai</div>
         <div class="sm2-desc">Kemampuan menjaga tingkat akurasi penerimaan material pada tahun 2025.</div>
         <div class="sm2-metric">
-          <div class="sm2-metric-label">Outcome</div>
+          <div class="sm2-metric-label">Metode</div>
           <div class="sm2-metric-val">Eliminasi Problem 2025</div>
         </div>
       </div>
@@ -1986,10 +2223,10 @@ body.cmt-mode * { cursor:crosshair !important; }
         <div class="sm2-watermark">R</div>
         <div class="sm2-tag">Reasonable</div>
         <div class="sm2-key">Beralasan</div>
-        <div class="sm2-desc">Menghilangkan potensi salah input serta pemborosan waktu di proses administrasi.</div>
+        <div class="sm2-desc">Satu kesalahan hitung dapat berdampak pada stok, laporan LPB, dan kepercayaan data.</div>
         <div class="sm2-metric">
-          <div class="sm2-metric-label">Risk Eliminated</div>
-          <div class="sm2-metric-val">Error + Waste Risk</div>
+          <div class="sm2-metric-label">Dampak Dicegah</div>
+          <div class="sm2-metric-val">Stok + Data LPB Salah</div>
         </div>
       </div>
 
@@ -1997,9 +2234,10 @@ body.cmt-mode * { cursor:crosshair !important; }
         <div class="sm2-watermark">T</div>
         <div class="sm2-tag">Time Bound</div>
         <div class="sm2-key">Periode</div>
-        <div class="sm2-desc">Target tercapai dalam kurun waktu yang jelas dan terjadwal.</div>
+        <div class="sm2-desc">Akurasi 100% dicapai dan dipertahankan dalam periode implementasi yang terjadwal.
+</div>
         <div class="sm2-metric">
-          <div class="sm2-metric-label">Durasi</div>
+          <div class="sm2-metric-label">Target</div>
           <div class="sm2-metric-val">3 Bulan</div>
         </div>
       </div>
@@ -2014,22 +2252,22 @@ body.cmt-mode * { cursor:crosshair !important; }
       </div>
       <div class="sm2-out-grid">
         <div class="sm2-out-card">
-          <div class="sm2-out-icon" style="background:rgba(255,69,0,.12);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff8c42" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-          <div class="sm2-out-label">Cost — Admin</div>
-          <div class="sm2-out-flow"><span class="sm2-out-bf">3.454 dtk</span><span class="sm2-out-arrow">→</span><span class="sm2-out-af">32 dtk</span></div>
-          <div class="sm2-out-note">Penghematan <strong>3.422 dtk / bulan</strong> proses admin</div>
+          <div class="sm2-out-icon" style="background:rgba(56,189,248,.12);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="sm2-out-label">Quality — Akurasi</div>
+          <div class="sm2-out-flow"><span class="sm2-out-bf">Ada Selisih</span><span class="sm2-out-arrow">→</span><span class="sm2-out-af">0 Selisih</span></div>
+          <div class="sm2-out-note">Eliminasi <strong>human error</strong> penghitungan box</div>
         </div>
         <div class="sm2-out-card">
-          <div class="sm2-out-icon" style="background:rgba(5,150,105,.12);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="sm2-out-icon" style="background:rgba(5,150,105,.12);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
           <div class="sm2-out-label">Delivery — Akurasi</div>
           <div class="sm2-out-flow"><span class="sm2-out-bf">Manual</span><span class="sm2-out-arrow">→</span><span class="sm2-out-af">Otomatis</span></div>
-          <div class="sm2-out-note">Validasi <strong>real-time</strong> antar departemen</div>
+          <div class="sm2-out-note">Validasi Incoming dengan metode otomatis</div>
         </div>
         <div class="sm2-out-card">
-          <div class="sm2-out-icon" style="background:rgba(37,99,235,.12);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-          <div class="sm2-out-label">Productivity — Cek</div>
-          <div class="sm2-out-flow"><span class="sm2-out-bf">2,04 dtk/box</span><span class="sm2-out-arrow">→</span><span class="sm2-out-af">1,2 dtk/box</span></div>
-          <div class="sm2-out-note">Penurunan <strong>41%</strong> waktu pengecekan</div>
+          <div class="sm2-out-icon" style="background:rgba(255,69,0,.12);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="sm2-out-label">Productivity — LPB</div>
+          <div class="sm2-out-flow"><span class="sm2-out-bf">Rawan Error</span><span class="sm2-out-arrow">→</span><span class="sm2-out-af">Akurat</span></div>
+          <div class="sm2-out-note">Laporan penerimaan <strong>terpercaya</strong> & konsisten</div>
         </div>
       </div>
     </div>
@@ -2046,7 +2284,7 @@ body.cmt-mode * { cursor:crosshair !important; }
   </svg>
   <div class="an-inner">
     <div class="sec-y-tag rv">Plan</div>
-    <h2 class="sec-y-h rv">Analisa Kondisi yang Ada</h2>
+    <h2 class="sec-y-h rv">Analysis of Current Conditions</h2>
     <button class="an-tab active">4M1E Analysis</button>
     <div id="tab-m4e" class="tp active">
       <div class="eb-board eb-pending">
@@ -2071,7 +2309,7 @@ body.cmt-mode * { cursor:crosshair !important; }
             <div class="eb-info">
               <div class="eb-label">Man</div>
               <div class="eb-sub">Human Error — Potensi Kesalahan Catat</div>
-              <div class="eb-note">Operator menulis data manual tanpa validasi. Kelelahan & ketidaktelitian → salah tulis jumlah, salah lot. <strong>Kerugian Rp 200.000/kasus.</strong></div>
+              <div class="eb-note">Operator menulis data manual tanpa validasi. Kelelahan & ketidaktelitian → salah tulis jumlah, salah lot.</div>
             </div>
           </div>
 
@@ -2087,8 +2325,8 @@ body.cmt-mode * { cursor:crosshair !important; }
             </div>
             <div class="eb-info">
               <div class="eb-label">Machine</div>
-              <div class="eb-sub">Cek Manual — Tidak Ada Mesin Validasi</div>
-              <div class="eb-note">Pengecekan kuantitas sepenuhnya manual. <strong>Tidak ada perangkat digital terintegrasi</strong> untuk validasi kedatangan barang.</div>
+              <div class="eb-sub">Tidak Ada Mesin Validasi</div>
+              <div class="eb-note">Tidak ada perangkat digital terintegrasi</div>
             </div>
           </div>
 
@@ -2104,8 +2342,8 @@ body.cmt-mode * { cursor:crosshair !important; }
             </div>
             <div class="eb-info">
               <div class="eb-label">Method</div>
-              <div class="eb-sub">Proses Lebih Lama — CT 157 dtk</div>
-              <div class="eb-note">Alur Incoming Check → isi manual → distribusi memakan <strong>157 detik/hari</strong>. Proses bertahap manual menciptakan bottleneck administrasi.</div>
+              <div class="eb-sub">Proses Dilakukan Secara Manual</div>
+              <div class="eb-note">Pembuatan Incoming Checklist dan perhitungan kuantitas Box dilakukan secara manual.</div>
             </div>
           </div>
 
@@ -2113,20 +2351,19 @@ body.cmt-mode * { cursor:crosshair !important; }
 
         <div class="eb-grid-bottom">
           <!-- MATERIAL — FAIL -->
-          <div class="eb-card fail-card eb-c4">
+          <div class="eb-card ok-card eb-c4">
             <div class="eb-pin"></div>
             <div class="eb-tape"></div>
             <div class="eb-clip">№ 04</div>
-            <div class="eb-photo fail-bg">
-              <span class="eb-stamp-status fail">FAIL</span>
+            <div class="eb-photo ok-bg">
+              <span class="eb-stamp-status ok">OK</span>
               <svg class="eb-photo-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-              <span class="eb-photo-tag">SUSPECT</span>
+              <span class="eb-photo-tag">CLEAR</span>
             </div>
             <div class="eb-info">
               <div class="eb-label">Material</div>
-              <div class="eb-sub">Salah Kirim</div>
-              <div class="eb-note">Supplier kadang <strong>mengirim item yang salah dan kesalahan jadwal</strong>  menyebabkan kesalahan validasi pada saat penerimaan.</div>
-             </div>
+              <div class="eb-sub">Tidak Bermasalah</div>
+              </div>
           </div>
 
           <!-- ENVIRONMENT — OK -->
@@ -2151,7 +2388,7 @@ body.cmt-mode * { cursor:crosshair !important; }
       <div class="an-detail">
         <div class="an-dcard rv lft">
           <div class="an-dh rd">② Pencatatan Manual</div>
-          <div class="an-dsc">Pencatatan dilakukan secara <strong style="color:#b91c1c;">manual</strong> menggunakan Incoming Check, beResiko menyebabkan <strong style="color:#b91c1c;">kesalahan catat</strong>.</div>
+          <div class="an-dsc">Pencatatan dilakukan secara <strong style="color:#b91c1c;">manual</strong> menggunakan Incoming Checklist, beResiko menyebabkan <strong style="color:#b91c1c;">kesalahan catat</strong>.</div>
           <div class="tw-y"><table class="tbl-y"><thead><tr><th></th><th>Item</th><th>Nilai</th></tr></thead><tbody><tr><td>A</td><td>Waktu Terbuang per Kesalahan</td><td>30 menit</td></tr><tr><td>B</td><td>Biaya Penanganan</td><td>Rp 150.000</td></tr><tr><td>C</td><td>Total Kerugian Per Kasus</td><td style="color:#b91c1c;"><b>Rp 200.000</b></td></tr><tr><td>D</td><td>Kasus per Bulan</td><td>1 Kasus</td></tr><tr class="tot"><td>E</td><td>Kerugian Per Bulan</td><td><b>Rp 200.000</b></td></tr></tbody></table></div>
         </div>
         <div class="an-dcard rv rgt">
@@ -2170,9 +2407,8 @@ body.cmt-mode * { cursor:crosshair !important; }
  
   <div class="fb-inner">
     <div class="sec-b-tag rv">Plan</div>
-    <h2 class="sec-b-h rv">Analisa Penyebab Masalah</h2>
-    <p class="sec-b-s rv">Diagram Fishbone (Ishikawa) — identifikasi root cause dari akar permasalahan.</p>
-    <div class="fb-wrap rv">
+    <h2 class="sec-b-h rv">Problem Cause Analysis</h2>
+     <div class="fb-wrap rv">
       <img src="fishbone.png" alt="Fishbone Diagram" style="width:100%;display:block;border-radius:14px;" onerror="this.style.opacity='0.4'">
      </div>
   </div>
@@ -2184,17 +2420,16 @@ body.cmt-mode * { cursor:crosshair !important; }
   <div class="wh-inner">
     <div style="position:absolute;top:18px;right:24px;font-family:'League Spartan',sans-serif;font-size:132px;font-weight:900;line-height:1;letter-spacing:-5px;color:#ff4500;opacity:.16;pointer-events:none;user-select:none;">5W2H</div>
     <div class="sec-n-tag" style="margin-bottom:12px;">Do</div>
-    <h2 class="sec-n-h rv" style="margin-bottom:8px;">Rencana Aksi — 5W2H</h2>
+    <h2 class="sec-n-h rv" style="margin-bottom:8px;">Action Plan — 5W2H</h2>
      <div class="wh-table rv">
       <div class="wh-col wh-c-what"><div class="wh-col-head" data-word="WHAT"><div class="wh-word">WHAT</div><div class="wh-key">Apa?</div></div><div class="wh-col-body"><div class="wh-item"><div class="wh-item-ctx">Root Cause 1 (R1)</div><div class="wh-item-val">Belum ada sistem validasi real-time</div></div><div class="wh-item"><div class="wh-item-ctx">Root Cause 2 (R2)</div><div class="wh-item-val">Belum ada perangkat bantu pengecekan box</div></div></div></div>
-      <div class="wh-col wh-c-why"><div class="wh-col-head" data-word="WHY"><div class="wh-word">WHY</div><div class="wh-key">Mengapa?</div></div><div class="wh-col-body"><div class="wh-item"><div class="wh-item-ctx">Root Cause 1 (R1)</div><div class="wh-item-val">Pembuatan Incoming Check masih manual via Excel — CT Admin <strong>3.454 dtk/bulan</strong>. Status incoming tidak terdistribusi otomatis ke PPIC &amp; Produksi sehingga koordinasi terlambat dan kesalahan baru ketahuan saat sudah berdampak.</div></div><div class="wh-item"><div class="wh-item-ctx">Root Cause 2 (R2)</div><div class="wh-item-val">Hitung &amp; validasi box dilakukan secara visual + tangan — CT <strong>2 dtk/box</strong> × ratusan box/hari. Operator rentan salah hitung dan salah catat, supplier salah kirim luput dari pengecekan.</div></div></div></div>
+      <div class="wh-col wh-c-why"><div class="wh-col-head" data-word="WHY"><div class="wh-word">WHY</div><div class="wh-key">Mengapa?</div></div><div class="wh-col-body"><div class="wh-item"><div class="wh-item-ctx">Root Cause 1 (R1)</div><div class="wh-item-val">Karena pengecekan masih menggunakan dokumen Incoming Checklist yang tidak memvalidasi pengecekan secara otomatis.</div></div><div class="wh-item"><div class="wh-item-ctx">Root Cause 2 (R2)</div><div class="wh-item-val">Hitung &amp; validasi box dilakukan secara manual sehingga operator rentan salah hitung dan salah catat, serta supplier salah kirim luput dari pengecekan.</div></div></div></div>
       <div class="wh-col wh-c-where"><div class="wh-col-head" data-word="WHERE"><div class="wh-word">WHERE</div><div class="wh-key">Di mana?</div></div><div class="wh-col-body"><div class="wh-item"><div class="wh-item-val">Area Warehouse Penerimaan Barang</div></div><div class="wh-item"> </div></div></div>
       <div class="wh-col wh-c-when"><div class="wh-col-head" data-word="WHEN"><div class="wh-word">WHEN</div><div class="wh-key">Kapan?</div></div><div class="wh-col-body"><div class="wh-item"><div class="wh-item-val">September 2025</div></div></div></div>
       <div class="wh-col wh-c-who"><div class="wh-col-head" data-word="WHO"><div class="wh-word">WHO</div><div class="wh-key">Siapa?</div></div><div class="wh-col-body"><div class="wh-item"><div class="wh-item-ctx">Tim 1</div><div class="wh-item-val">Farhan (IT) &amp; Satria (WHS)</div></div></div></div>
       <div class="wh-col wh-c-how"><div class="wh-col-head" data-word="HOW"><div class="wh-word">HOW</div><div class="wh-key">Bagaimana?</div></div><div class="wh-col-body"><div class="wh-item-val">Membuat Sistem Otomasi Proses Warehouse Incoming</div></div></div>
       <div class="wh-col wh-c-howm"><div class="wh-col-head" data-word="HOW MUC"><div class="wh-word">HOW MUCH</div><div class="wh-key">Berapa?</div></div><div class="wh-col-body"><div class="wh-item"><div class="wh-item-ctx" style="color:#2563eb">TV/Monitor</div><div class="wh-item-val">Andon Board display TV — <strong>± Rp 5.299.000</strong> (SAMSUNG TV 55")</div></div><div class="wh-item"><div class="wh-item-ctx" style="color:#2563eb">QR Scanner</div><div class="wh-item-val">Bluetooth QR scanner — <strong>± Rp 1.500.000</strong></div></div><div class="wh-item wh-total"><div class="wh-item-ctx" style="color:#2563eb">Total Est.</div><div class="wh-item-val wh-total-val">± Rp 6.799.000</div></div></div></div>
     </div>
-    <div class="wh-solution rv"><div class="wh-s-l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ff4500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Kesimpulan — Solusi Optimal</div><div class="wh-s-t">Kedua root cause (R1 &amp; R2) menunjuk ke satu kombinasi solusi: <strong>Sungwoo Web App + Bluetooth QR Scanner + Andon Board</strong>. Andon Board menjawab kebutuhan sistem validasi real-time (R1), QR Scanner menjawab kebutuhan perangkat bantu pengecekan box (R2), dan Sungwoo Web App menjadi platform yang menyatukan keduanya.</div></div>
   </div>
 </section>
 
@@ -2204,7 +2439,7 @@ body.cmt-mode * { cursor:crosshair !important; }
     <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;margin-bottom:8px;" class="rv">
       <div>
         <div class="sec-n-tag" style="margin-bottom:12px;">Do</div>
-        <h2 class="sec-n-h" style="margin-bottom:8px;">Rencana Penanggulangan</h2>
+        <h2 class="sec-n-h" style="margin-bottom:8px;">Countermeasure Plan</h2>
        </div>
       <!-- QR scan animation -->
       <!-- <div style="flex-shrink:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,107,53,.15);border-radius:20px;padding:24px 28px;text-align:center;backdrop-filter:blur(4px);">
@@ -2317,7 +2552,7 @@ body.cmt-mode * { cursor:crosshair !important; }
                 <div class="it-diff-h">// Perubahan alur — pencatatan</div>
                 <span class="ln cmt">Before — manual Excel x setiap kedatangan supplier</span>
                 <span class="ln del">Buka Supplier Delivery Schedule</span>
-                <span class="ln del">Buka Incoming Check / Entry</span>
+                <span class="ln del">Buka Incoming Checklist / Entry</span>
                 <span class="ln del">Print Incoming Checklist (validate QTY manual)</span>
                 <span class="ln cmt">After — single-flow web app</span>
                 <span class="ln add wa-hl" id="waHl0">Buka Sungwoo Web App</span>
@@ -2427,8 +2662,8 @@ body.cmt-mode * { cursor:crosshair !important; }
                 </div>
                 <div class="it-vs-feats">
                   <div class="it-vs-f c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Hingga <strong>4.000 karakter</strong> data</div>
-                  <div class="it-vs-f c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Scan dari <strong>360°</strong> arah mana pun</div>
-                  <div class="it-vs-f c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Tahan rusak fisik <strong>±30%</strong></div>
+                  <div class="it-vs-f c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Scan dari arah mana pun</div>
+                  <div class="it-vs-f c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Tahan rusak fisik</div>
                   <!-- <div class="it-vs-f c"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Built-in error correction</div> -->
                 </div>
               </div>
@@ -2455,8 +2690,19 @@ body.cmt-mode * { cursor:crosshair !important; }
           </div>
           <div class="it-card final">
             <div class="it-title">Sistem Terpadu — <em class="g">3 Komponen, 1 Solusi</em></div>
-            <div class="it-desc">QR Scanner di area receiving untuk validasi kuantitas otomatis per box. Andon Board (TV 55") di area umum broadcast status real-time ke PPIC &amp; Produksi.</div>
-              <div class="it-img-row" style="margin-top:14px;">
+            <div class="it-desc">Web App import PO ke database, QR Scanner validasi kuantitas otomatis per box, dan Andon Board (TV 55") broadcast status real-time ke PPIC &amp; Produksi. <strong style="color:#34d399;">Incoming Checklist cetak tidak lagi diperlukan</strong> — validasi langsung divisualisasikan via Andon Board.</div>
+              <div class="it-img-row" style="margin-top:14px;grid-template-columns:repeat(3,1fr);">
+              <div>
+                <div class="it-img">
+                  <img src="webapp-screenshot.png" alt="Sungwoo Web App" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div style="display:none; flex-direction:column; align-items:center; gap:6px;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                    <div class="it-img-ph-l">Image Placeholder</div>
+                    <div class="it-img-ph-f">webapp-screenshot.png</div>
+                  </div>
+                </div>
+                <div class="it-img-cap">Sungwoo Web App — import PO ke database</div>
+              </div>
               <div>
                 <div class="it-img">
                   <img src="qr-code.png" alt="Bluetooth QR Scanner" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -2489,7 +2735,7 @@ body.cmt-mode * { cursor:crosshair !important; }
                     <div class="it-final-t">Sungwoo Web App</div>
                   </div>
                 </div>
-                <div class="it-final-d">Upload PO → auto-generate Incoming Checklist. Eliminasi pengisian manual.</div>
+                <div class="it-final-d">Import PO Supplier ke database Web App Sungwoo. Data dapat di lihat di Andon Biard.</div>
               </div>
               <div class="it-final-comp">
                 <div class="it-final-head">
@@ -2525,90 +2771,335 @@ body.cmt-mode * { cursor:crosshair !important; }
   
   <div class="sol-inner">
     <div class="sec-w-tag">Do</div>
-    <h2 class="sec-w-h rv">Melakukan Penanggulangan</h2>
-    <p class="sec-w-s rv" style="color:#888;">Incoming Material Check — Before &amp; After Improvement.</p>
-
-    <!-- ══ CHAPTER 01: ADMINISTRATIVE PROCESS ══ -->
-    <div class="sn-chapter rv">
-      <div class="sn-chapter-head">
-        <div class="sn-chapter-num">01</div>
-        <div class="sn-chapter-meta">
-          <div class="sn-chapter-eyebrow">Activity 1</div>
-          <div class="sn-chapter-title">Administrative Process</div>
+    <h2 class="sec-w-h rv">Implementing Countermeasures</h2>
+ 
+    <!-- ══ Alur Proses Before / After ══ -->
+    <div class="mp-newproc rv">
+      <div class="mp-eyebrow">Proses Baru</div>
+      <h3 class="mp-section-h">Step by Step Proses Penerimaan Baru</h3>
+      <div class="mp-newproc-shell">
+        <div class="mp-newproc-head">
+   
+          <div class="mp-newproc-pill">4 langkah utama</div>
         </div>
-        <div class="sn-chapter-tag">Manual → Sungwoo Web App</div>
-      </div>
-      <div class="sn-ba-grid">
-        <div class="sn-col">
-          <div class="sn-col-head"><span class="sn-col-badge rd">Before</span><span class="sn-col-sub">3-step manual entry</span></div>
-          <ol class="sn-steps">
-            <li><span class="sn-st-l">Open Supplier Delivery Schedule</span><span class="sn-st-t rd">35</span></li>
-            <li><span class="sn-st-l">Open Incoming Check / Entry</span><span class="sn-st-t rd">36</span></li>
-            <li><span class="sn-st-l">Print Incoming Checklist (validate QTY)</span><span class="sn-st-t rd">86</span></li>
-          </ol>
-          <div class="sn-col-foot rd"><span>CT Total / bulan</span><strong>3.454 dtk</strong></div>
-        </div>
-        <div class="sn-col-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></div>
-        <div class="sn-col">
-          <div class="sn-col-head"><span class="sn-col-badge gn">After</span><span class="sn-col-sub">2-step web flow</span></div>
-          <ol class="sn-steps">
-            <li><span class="sn-st-l">Open Sungwoo Web App</span><span class="sn-st-t gn">15</span></li>
-            <li><span class="sn-st-l">Upload &amp; Import Excel File</span><span class="sn-st-t gn">17</span></li>
-          </ol>
-          <div class="sn-col-foot gn"><span>CT Total / bulan</span><strong>32 dtk</strong></div>
-        </div>
-      </div>
-      <div class="sn-impact">
-        <div class="sn-impact-l">CT Admin<br>Reduce</div>
-        <div class="sn-impact-v">3.422 <span>dtk / bulan</span></div>
-        <div class="sn-impact-bar"><div class="sn-impact-fill" style="width:95%"></div></div>
-      </div>
-    </div>
-
-    <!-- ══ CHAPTER 02: ANDON BOARD ══ -->
-    <div class="sn-chapter rv">
-      <div class="sn-chapter-head">
-        <div class="sn-chapter-num">02</div>
-        <div class="sn-chapter-meta">
-          <div class="sn-chapter-eyebrow">Activity 2</div>
-          <div class="sn-chapter-title">Andon Board — Real-Time Check</div>
-        </div>
-        <div class="sn-chapter-tag">QR Scan + Live Display</div>
-      </div>
-      <div class="sn-andon-grid">
-        <div class="sn-andon-vis">
-          <div class="sn-andon-img">
-            <img src="andon-board.png" alt="Andon Board" onerror="this.outerHTML='<div class=\'img-ph-light\' style=\'min-height:160px;\'><svg width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1.5\'><rect x=\'2\' y=\'3\' width=\'20\' height=\'14\' rx=\'2\'/><line x1=\'8\' y1=\'21\' x2=\'16\' y2=\'21\'/></svg><span>andon-board.png</span></div>'">
-            <div class="sn-andon-cap">Andon Board Display — TV 55"</div>
+        <div class="mp-newproc-grid">
+          <div class="mp-newproc-step is-improved">
+            <div class="mp-newproc-improved">Improved!</div>
+            <div class="mp-newproc-step-top">
+              <div class="mp-newproc-step-n">01</div>
+             </div>
+            <div class="mp-newproc-media">
+              <img src="webapp-screenshot1.PNG" alt="Import PO Supplier">
+            </div>
+            <div class="mp-newproc-step-t">Import PO ke Database</div>
+            <div class="mp-newproc-step-s">PO Supplier diimport ke Sungwoo Web App sehingga data pengiriman masuk ke database dan ditampilkan di Andon Board.</div>
+            <div class="mp-newproc-step-meta">
+              <span>Database</span>
+              <strong>Web App</strong>
+            </div>
           </div>
-         
+          <div class="mp-newproc-step">
+            <div class="mp-newproc-step-top">
+              <div class="mp-newproc-step-n">02</div>
+            </div>
+            <div class="mp-newproc-media">
+              <img src="step-01.png" alt="Material Tiba di Receiving">
+            </div>
+            <div class="mp-newproc-step-t">Material Tiba di Receiving</div>
+            <div class="mp-newproc-step-s">Supplier tiba di area penerimaan membawa surat jalan dan material sesuai pengiriman yang sudah tercatat.</div>
+            <div class="mp-newproc-step-meta">
+              <span>Incoming</span>
+              <strong>Receiving</strong>
+            </div>
+          </div>
+          <div class="mp-newproc-step is-improved">
+            <div class="mp-newproc-improved">Improved!</div>
+            <div class="mp-newproc-step-top">
+              <div class="mp-newproc-step-n">03</div>
+            </div>
+            <div class="mp-newproc-media">
+              <img src="qr-code.png" alt="Validasi via QR Scan dan Andon">
+            </div>
+            <div class="mp-newproc-step-t">Validasi via QR Scan + Andon</div>
+            <div class="mp-newproc-step-s">Tiap box di-scan QR untuk validasi otomatis dan status incoming langsung tampil live di Andon Board.</div>
+            <div class="mp-newproc-step-meta">
+              <span>Validation</span>
+              <strong>QR + Andon</strong>
+            </div>
+          </div>
+          <div class="mp-newproc-step">
+            <div class="mp-newproc-step-top">
+              <div class="mp-newproc-step-n">04</div>
+            </div>
+            <div class="mp-newproc-media">
+              <img src="step-06.png" alt="QR Scan dan Validasi">
+            </div>
+            <div class="mp-newproc-step-t">Surat Laporan (LPB)</div>
+            <div class="mp-newproc-step-s">Pembuatan Laporan Penerimaan Barang dilanjutkan menggunakan data yang sudah tervalidasi dari proses digital.</div>
+            <div class="mp-newproc-step-meta">
+              <span>Output</span>
+              <strong>LPB</strong>
+            </div>
+          </div>
         </div>
-        <div class="sn-andon-stats">
-          <div class="sn-andon-stats-h">Perbandingan CT Pengecekan Jumlah QTY Box</div>
-          <div class="sn-andon-basis" style="font-size:11px;color:#0d0d0d;margin-bottom:8px;line-height:1.5;">Berdasarkan rata-rata <strong style="color:#000;">1.524 box/hari</strong> × CT per box</div>
-          <div class="sn-stat-row rd"><span>Before — Manual Check<br><small style="font-size:10px;opacity:.7;">1.524 box × 2,04 dtk</small></span><strong>3.109,0 dtk/hari</strong></div>
-          <div class="sn-stat-row gn"><span>After — QR Scan<br><small style="font-size:10px;opacity:.7;">1.524 box × 1,2 dtk</small></span><strong>1.829 dtk/hari</strong></div>
-          <div class="sn-stat-row big"><span>CT Reduce</span><strong>1.280,16 dtk/hari</strong></div>
-        </div>
-      </div>
-      <div class="sn-impact">
-        <div class="sn-impact-l">CT Check<br>Reduce</div>
-        <div class="sn-impact-v">28.163,52 <span>dtk / bulan</span></div>
-        <div class="sn-impact-bar"><div class="sn-impact-fill" style="width:71%"></div></div>
+       
       </div>
     </div>
 
-    <!-- ══ TOTAL OUTCOME ══ -->
-    <div class="sn-outcome rv">
-      <div class="sn-outcome-l">
-        <div class="sn-outcome-eyebrow">Total Penghematan / Bulan</div>
-        <div class="sn-outcome-num">8,77 <span>jam</span></div>
-        <div class="sn-outcome-sub">≈ 31.585,52 detik / bulan dari kombinasi efisiensi proses administrasi (Web App) dan pengecekan real-time (Andon Board).</div>
+    <div class="mp-flow rv">
+      <div class="mp-eyebrow">Alur Proses</div>
+      <h3 class="mp-section-h">Transformasi Penerimaan Barang</h3>
+      <div class="mp-flow-grid">
+
+        <!-- BEFORE -->
+        <div class="mp-flow-col before">
+          <div class="mp-flow-head">
+            <span class="mp-flow-stamp rd">Before</span>
+            <span class="mp-flow-tag rd">Manual · Rawan Error</span>
+          </div>
+          <div class="mp-flow-steps">
+            <div class="mp-flow-step warn-step">
+              <div class="mp-flow-step-n">01</div>
+              <div class="mp-flow-step-body">
+                <div class="mp-flow-step-t">Pencatatan Manual</div>
+                <div class="mp-flow-step-s">Staff WHS isi Incoming Checklist manual via Excel dari PO Supplier.</div>
+              </div>
+              <div class="mp-flow-step-badge warn">Warning</div>
+            </div>
+            <div class="mp-flow-step">
+              <div class="mp-flow-step-n">02</div>
+              <div class="mp-flow-step-body">
+                <div class="mp-flow-step-t">Material Tiba di Receiving</div>
+                <div class="mp-flow-step-s">Supplier tiba di area penerimaan membawa surat jalan dan material.</div>
+              </div>
+              <div class="mp-flow-step-badge ok">OK</div>
+            </div>
+            <div class="mp-flow-step warn-step">
+              <div class="mp-flow-step-n">03</div>
+              <div class="mp-flow-step-body">
+                <div class="mp-flow-step-t">Validasi Kuantitas</div>
+                <div class="mp-flow-step-s">Jumlah box dicatat manual & dicocokkan visual dengan checklist.</div>
+              </div>
+              <div class="mp-flow-step-badge warn">Warning</div>
+            </div>
+            <div class="mp-flow-step">
+              <div class="mp-flow-step-n">04</div>
+              <div class="mp-flow-step-body">
+                <div class="mp-flow-step-t">Surat Laporan (LPB)</div>
+                <div class="mp-flow-step-s">Pembuatan Laporan Penerimaan Barang di program vendor Sungwoo.</div>
+              </div>
+              <div class="mp-flow-step-badge ok">OK</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BRIDGE -->
+        <div class="mp-flow-bridge">
+          <div class="mp-flow-bridge-line"></div>
+          <div class="mp-flow-bridge-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="mp-flow-bridge-lbl">Digitalisasi</div>
+          <div class="mp-flow-bridge-line"></div>
+        </div>
+
+        <!-- AFTER -->
+        <div class="mp-flow-col after">
+          <div class="mp-flow-head">
+            <span class="mp-flow-stamp gn">After</span>
+            <span class="mp-flow-tag gn">Otomatis · Real-Time</span>
+          </div>
+          <div class="mp-flow-steps">
+            <div class="mp-flow-step fix-step">
+              <div class="mp-flow-step-n">01</div>
+              <div class="mp-flow-step-body">
+                <div class="mp-flow-step-t">Import PO ke Database</div>
+                <div class="mp-flow-step-s">PO Supplier diimport ke Sungwoo Web App — data ditampilkan pengiriman ditampilkan di Andon Board.</strong></div>
+              </div>
+              <div class="mp-flow-step-badge fix">Fixed</div>
+            </div>
+            <div class="mp-flow-step same-step">
+              <div class="mp-flow-step-n">02</div>
+              <div class="mp-flow-step-body">
+                <div class="mp-flow-step-t">Material Tiba di Receiving</div>
+                <div class="mp-flow-step-s">Supplier tiba di area penerimaan membawa surat jalan dan material.</div>
+              </div>
+              <div class="mp-flow-step-badge same">Sama</div>
+            </div>
+            <div class="mp-flow-step fix-step">
+              <div class="mp-flow-step-n">03</div>
+              <div class="mp-flow-step-body">
+                <div class="mp-flow-step-t">Validasi via QR Scan + Andon</div>
+                <div class="mp-flow-step-s">Tiap box di-scan QR → validasi otomatis & status live di Andon Board.</div>
+              </div>
+              <div class="mp-flow-step-badge fix">Fixed</div>
+            </div>
+            <div class="mp-flow-step same-step">
+              <div class="mp-flow-step-n">04</div>
+              <div class="mp-flow-step-body">
+                <div class="mp-flow-step-t">Surat Laporan (LPB)</div>
+                <div class="mp-flow-step-s">Pembuatan Laporan Penerimaan Barang di program vendor Sungwoo.</div>
+              </div>
+              <div class="mp-flow-step-badge same">Sama</div>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="sn-outcome-r">
-        <div class="sn-mini"><span>CT Admin Reduce / bulan</span><strong>3.422 dtk</strong></div>
-         <div class="sn-mini"><span>CT Box Count Reduce / bulan</span><strong>28.163,52 dtk</strong></div>
-        <div class="sn-mini" style="background:rgba(52,211,153,.08);border-color:rgba(52,211,153,.2);"><span style="color:rgba(52,211,153,.7);">Total / bulan</span><strong style="color:#34d399;">31.585,52 dtk</strong></div>
+    </div>
+
+    <!-- ══ Root Cause Resolution ══ -->
+    <div class="mp-rc rv">
+      <div class="mp-eyebrow">Penyelesaian</div>
+      <h3 class="mp-section-h">Eliminasi 2 Root Cause</h3>
+
+      <div class="mp-rc-grid">
+
+        <!-- R1: Sungwoo Web App -->
+        <div class="mp-rc-card">
+          <div class="mp-rc-head">
+            <div class="mp-rc-head-l">
+              <div class="mp-rc-num">R1</div>
+              <div class="mp-rc-tag">
+                <div class="mp-rc-tag-l">Root Cause · Admin</div>
+                <div class="mp-rc-tag-t">Sistem Validasi Real-Time</div>
+              </div>
+            </div>
+            <div class="mp-rc-status">
+              <div class="mp-rc-status-dot"></div>
+              <div class="mp-rc-status-l">Closed</div>
+            </div>
+          </div>
+          <div class="mp-rc-body">
+            <div class="mp-rc-info">
+              <div class="mp-rc-problem">
+                <div class="mp-rc-problem-l">Problem</div>
+                <div class="mp-rc-problem-t">Pencatatan manual via Excel.</div>
+              </div>
+              <div class="mp-rc-arrow">Solusi</div>
+              <div class="mp-rc-sol">
+                <div class="mp-rc-sol-l">Solusi Digital</div>
+                <div class="mp-rc-sol-t">Sungwoo Web App</div>
+                <div class="mp-rc-sol-d">Import seluruh PO Supplier per bulan sekaligus ke Web App Sungwoo dan data dapat ditampilkan di Andon Board.</div>
+              </div>
+              <div class="mp-rc-feats">
+                <div class="mp-rc-feat">
+                  <div class="mp-rc-feat-ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+                  Import banyak PO sekaligus ke database
+                </div>
+                <div class="mp-rc-feat">
+                  <div class="mp-rc-feat-ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0018 0V5"/><path d="M3 12a9 3 0 0018 0"/></svg></div>
+                  Database terpusat & terstandar
+                </div>
+                <div class="mp-rc-feat">
+                  <div class="mp-rc-feat-ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+                 Data dapat dilihat di Andon Board
+                </div>
+              </div>
+            </div>
+            <div class="mp-rc-vis">
+              <div class="mp-rc-imgs">
+                <div class="mp-rc-img">
+                  <img src="webapp-screenshot1.png" alt="Web App — Import PO" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="mp-rc-img-ph" style="display:none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                    <span>webapp-screenshot1.png</span>
+                  </div>
+                  <div class="mp-rc-img-cap">Import PO Supplier</div>
+                </div>
+                <div class="mp-rc-img">
+                  <img src="webapp-screenshot.png" alt="Web App — Database" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="mp-rc-img-ph" style="display:none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0018 0V5"/><path d="M3 12a9 3 0 0018 0"/></svg>
+                    <span>webapp-screenshot.png</span>
+                  </div>
+                  <div class="mp-rc-img-cap">Database Terpusat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- R2: QR Scanner + Andon Board -->
+        <div class="mp-rc-card">
+          <div class="mp-rc-head">
+            <div class="mp-rc-head-l">
+              <div class="mp-rc-num">R2</div>
+              <div class="mp-rc-tag">
+                <div class="mp-rc-tag-l">Root Cause · Lapangan</div>
+                <div class="mp-rc-tag-t">Perangkat Bantu Pengecekan Box</div>
+              </div>
+            </div>
+            <div class="mp-rc-status">
+              <div class="mp-rc-status-dot"></div>
+              <div class="mp-rc-status-l">Closed</div>
+            </div>
+          </div>
+          <div class="mp-rc-body">
+            <div class="mp-rc-info">
+              <div class="mp-rc-problem">
+                <div class="mp-rc-problem-l">Problem</div>
+                <div class="mp-rc-problem-t">Hitung box manual oleh operator — selisih kuantitas tidak terdeteksi, status incoming tidak terdistribusi.</div>
+              </div>
+              <div class="mp-rc-arrow">Solusi</div>
+              <div class="mp-rc-sol">
+                <div class="mp-rc-sol-l">Solusi Digital</div>
+                <div class="mp-rc-sol-t">QR Scanner + Andon Board</div>
+                <div class="mp-rc-sol-d">Tiap box di-scan untuk validasi otomatis. Andon Board menampilkan status per partnumber: OK, telat, kurang, atau berlebih.</div>
+              </div>
+              <div class="mp-rc-feats">
+                <div class="mp-rc-feat">
+                  <div class="mp-rc-feat-ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><line x1="14" y1="14" x2="14" y2="17"/><line x1="14" y1="20" x2="17" y2="20"/><line x1="20" y1="14" x2="20" y2="20"/></svg></div>
+                  QR Scan menggantikan hitung manual
+                </div>
+                <div class="mp-rc-feat">
+                  <div class="mp-rc-feat-ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                  Andon Board validasi semua box ter-scan
+                </div>
+                <div class="mp-rc-feat">
+                  <div class="mp-rc-feat-ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                  Auto-detect: Late · Under · Over
+                </div>
+              </div>
+            </div>
+            <div class="mp-rc-vis">
+              <div class="mp-rc-imgs">
+                <div class="mp-rc-img">
+                  <img src="qr-code.png" alt="Bluetooth QR Scanner" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="mp-rc-img-ph" style="display:none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6"/><rect x="15" y="3" width="6" height="6"/><rect x="3" y="15" width="6" height="6"/></svg>
+                    <span>qr-code.png</span>
+                  </div>
+                  <div class="mp-rc-img-cap">Bluetooth QR Scanner</div>
+                </div>
+                <div class="mp-rc-img">
+                  <img src="andon-board.png" alt="Andon Board" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="mp-rc-img-ph" style="display:none;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span>andon-board.png</span>
+                  </div>
+                  <div class="mp-rc-img-cap">Andon Board Display</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══ Closing Banner ══ -->
+    <div class="mp-closed rv">
+      <div class="mp-closed-stamp">Case Closed</div>
+      <div class="mp-closed-body">
+        <div class="mp-closed-eyebrow">Hasil Penanggulangan</div>
+        <div class="mp-closed-t">Kedua root cause <em>tereliminasi</em> akurasi penerimaan material divalidasi otomatis.</div>
+        <div class="mp-closed-s">Pencatatan, perhitungan, dan distribusi status kini berjalan dalam satu sistem terintegrasi.</div>
+      </div>
+      <div class="mp-closed-metric">
+        <div class="mp-closed-metric-l">Selisih Hitung</div>
+        <div class="mp-closed-metric-v">1 → 0</div>
+        <div class="mp-closed-metric-s">kasus / bulan</div>
       </div>
     </div>
 
@@ -2628,7 +3119,7 @@ body.cmt-mode * { cursor:crosshair !important; }
   </svg>
   <div class="rs-inner">
     <div class="sec-b-tag rv">Check</div>
-    <h2 class="sec-b-h rv">Konfirmasi Hasil After Improvement</h2>
+    <h2 class="sec-b-h rv">After-Improvement Results Confirmation</h2>
     <div class="rs-hero rv scl">
       <div class="rs-h-label">Total CT Penghematan Per Bulan</div>
       <div class="rs-big-num" data-count-dec="8.77">0</div>
@@ -2649,14 +3140,14 @@ body.cmt-mode * { cursor:crosshair !important; }
 <section id="efficiency">
   <div class="ef-inner">
     <div class="sec-w-tag">Check</div>
-    <h2 class="sec-w-h rv">Perhitungan Efisiensi &amp; Cost Saving</h2>
+    <h2 class="sec-w-h rv">Efficiency &amp; Cost Saving Calculation</h2>
  
     <!-- Hero ROI banner -->
     <div class="ef-hero rv">
       <div class="ef-hero-l">
         <div class="ef-hero-eyebrow">Total Cost Saving / Tahun</div>
         <div class="ef-hero-num"><span class="cur">Rp</span>5,51<span class="unit">Juta</span></div>
-        <div class="ef-hero-sub">Akumulasi penghematan biaya dari pencegahan kerugian + efisiensi waktu kerja berdasarkan UMR Gresik 2025 (Rp 5.195.401) dengan 22 hari kerja/bulan.</div>
+        <div class="ef-hero-sub">Akumulasi penghematan biaya dari pencegahan kerugian + efisiensi waktu kerja berdasarkan UMR Gresik 2026 (Rp 5.195.401) dengan 22 hari kerja/bulan.</div>
       </div>
       <div class="ef-hero-r">
         <div class="ef-hero-r-row">
@@ -2714,7 +3205,7 @@ body.cmt-mode * { cursor:crosshair !important; }
           <span class="val" style="color:#059669;font-size:18px;">Rp 5.506.572 / thn</span>
         </div>
 
-        <div class="ef-rc-foot">— Estimasi Tim QCC Warehouse · 2025 —</div>
+        <div class="ef-rc-foot">— Estimasi SS · 2026 —</div>
         <div class="ef-rc-barcode">
           <span style="height:30px"></span><span style="height:18px"></span><span style="height:30px"></span><span style="height:24px"></span><span style="height:14px"></span><span style="height:30px"></span><span style="height:30px"></span><span style="height:20px"></span><span style="height:28px"></span><span style="height:14px"></span><span style="height:30px"></span><span style="height:24px"></span><span style="height:18px"></span><span style="height:30px"></span><span style="height:30px"></span><span style="height:14px"></span><span style="height:26px"></span><span style="height:22px"></span><span style="height:30px"></span><span style="height:18px"></span><span style="height:30px"></span><span style="height:14px"></span><span style="height:28px"></span><span style="height:30px"></span><span style="height:20px"></span><span style="height:30px"></span><span style="height:18px"></span><span style="height:30px"></span>
         </div>
@@ -2783,9 +3274,8 @@ body.cmt-mode * { cursor:crosshair !important; }
   </svg>
   <div class="std-inner">
     <div class="sec-b-tag">Action</div>
-    <h2 class="sec-b-h rv">Standarisasi &amp; Tindak Lanjut</h2>
-    <p class="sec-b-s rv">Dokumentasi, instruksi kerja, dan jadwal pengecekan berkala.</p>
-    <div class="std-grid stg">
+    <h2 class="sec-b-h rv">Standardization &amp; Follow-Up</h2>
+     <div class="std-grid stg">
       <div class="std-folder rv">
         <div class="std-folder-tab or"></div>
         <div class="std-folder-head"><span class="std-folder-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span><div><div class="std-folder-ht">Buku Manual</div><div class="std-folder-hs">User Guide Sungwoo Web App</div></div></div>
@@ -2842,12 +3332,11 @@ body.cmt-mode * { cursor:crosshair !important; }
     <div class="ap-head rv">
       <div class="ap-head-l">
         <div class="sec-w-tag">Lampiran</div>
-        <h2>Math <em>Behind</em> the Numbers</h2>
-        <p>Setiap angka ditelusuri dari dasar — CT pengecekan &amp; admin, dikonversi jadi rupiah lewat upah per jam basis UMR Gresik 2025.</p>
-      </div>
+        <h2>Appendix</h2>
+       </div>
       <div class="ap-head-pills">
         <span class="ap-head-pill">PDCA · Check</span>
-        <span class="ap-head-pill g">QCC '25</span>
+        <span class="ap-head-pill g">SS '26</span>
       </div>
     </div>
 
@@ -2856,7 +3345,7 @@ body.cmt-mode * { cursor:crosshair !important; }
       <div class="ap-metric o"><div class="ap-metric-l">CT Admin Reduce</div><div class="ap-metric-v">3.422</div><div class="ap-metric-u">detik / bulan · −99%</div></div>
       <div class="ap-metric g"><div class="ap-metric-l">CT Check Reduce</div><div class="ap-metric-v">28.163<span class="small">,52</span></div><div class="ap-metric-u">detik / bulan · −41%</div></div>
       <div class="ap-metric b"><div class="ap-metric-l">Total Setara</div><div class="ap-metric-v">8,77<span class="small"> jam</span></div><div class="ap-metric-u">per bulan</div></div>
-      <div class="ap-metric o"><div class="ap-metric-l">Saving / Tahun</div><div class="ap-metric-v">Rp 5,51<span class="small"> jt</span></div><div class="ap-metric-u">basis UMR Gresik '25</div></div>
+      <div class="ap-metric o"><div class="ap-metric-l">Saving / Tahun</div><div class="ap-metric-v">Rp 5,51<span class="small"> jt</span></div><div class="ap-metric-u">basis UMR Gresik '26</div></div>
     </div>
 
     <!-- Two equation cards -->
@@ -2887,7 +3376,7 @@ body.cmt-mode * { cursor:crosshair !important; }
 
       <div class="ap-fcard">
         <div class="ap-fcard-h">
-          <div class="ap-fcard-t">📋 Administrasi Incoming Check</div>
+          <div class="ap-fcard-t">📋 Administrasi Incoming Checklist</div>
           <div class="ap-fcard-tag">Manual → Web App</div>
         </div>
         <div class="ap-row before">
@@ -2964,7 +3453,7 @@ body.cmt-mode * { cursor:crosshair !important; }
 <section id="closing">
   <div class="cl-inner">
     <div class="sec-w-tag" style="color:#ff4500;">Penutup</div>
-    <h2 class="sec-w-h rv" style="color:#090c18;">Penutup</h2>
+    <h2 class="sec-w-h rv" style="color:#090c18;">Closing</h2>
     <p class="sec-w-s rv" style="color:#888;">Testimoni dari para pengguna sistem baru di lapangan.</p>
     <div class="cl-testi stg">
 
@@ -2979,7 +3468,7 @@ body.cmt-mode * { cursor:crosshair !important; }
             <div class="cl-who">Warehouse</div>
             <div class="cl-role">Checker / Admin</div>
           </div>
-          <div class="cl-q">"Dengan adanya sistem baru ini, proses pencatatan penerimaan barang menjadi lebih cepat dan akurat. Kami tidak perlu lagi mencetak Incoming Check tapi langsung memantau kedatangan melalui Andon Board."</div>
+          <div class="cl-q">"Dengan adanya sistem baru ini, proses pencatatan penerimaan barang menjadi lebih cepat dan akurat. Kami tidak perlu lagi mencetak Incoming Checklist tapi langsung memantau kedatangan melalui Andon Board."</div>
           <div class="cl-accent-bar" style="background:linear-gradient(90deg,#ff4500,#ff8c42);"></div>
         </div>
       </div>
@@ -3184,6 +3673,15 @@ function waUpdateHl() {
 // Set initial highlight
 waUpdateHl();
 
+// Incoming Checklist overlay
+(function(){
+  const btn = document.getElementById('icBtn');
+  const overlay = document.getElementById('icOverlay');
+  if(!btn||!overlay) return;
+  btn.addEventListener('click', () => overlay.classList.toggle('visible'));
+  overlay.addEventListener('click', () => overlay.classList.remove('visible'));
+})();
+
 // Trailing cursor — spring follow
 (function() {
   const trail = document.getElementById('trail-cursor');
@@ -3276,65 +3774,29 @@ document.querySelectorAll('#timeline, #efficiency').forEach(el => bo.observe(el)
   pianoObs.observe(actionPlan);
 }());
 
-// Alur Proses — nodes/cards fly out from the center hub
+// Alur Proses — arrow chevrons slide in
 (function() {
-  const wrap = document.querySelector('.pr-circle-wrap');
-  if (!wrap) return;
-
-  const HUB_LEFT = 600, HUB_TOP = 380; // center hub pixel position
-
-  function runPrAnim() {
-    const hub = wrap.querySelector('.pr-center-hub');
-    if (hub) {
-      hub.style.opacity = '0';
-      hub.animate([
-        { opacity:0, transform:'translate(-50%,-50%) scale(0)' },
-        { opacity:1, transform:'translate(-50%,-50%) scale(1.18)', offset:0.6 },
-        { opacity:1, transform:'translate(-50%,-50%) scale(1)' }
-      ], { duration:500, easing:'ease-out', fill:'forwards' }).onfinish = () => { hub.style.opacity = ''; };
-    }
-
-    const svgEl = wrap.querySelector(':scope > svg');
-    if (svgEl) {
-      svgEl.style.opacity = '0';
-      svgEl.animate([{opacity:0},{opacity:1}], { duration:600, delay:200, easing:'ease', fill:'both' }).onfinish = () => { svgEl.style.opacity = ''; };
-    }
-
-    // DOM order is 06,01,02,03,04,05 — remap to animate in step order 01→06
-    const stepOrder = [1,2,3,4,5,0];
-    const allSteps = Array.from(wrap.querySelectorAll('.pr-step')); 
-    const allCards = Array.from(wrap.querySelectorAll('.pr-dc'));
-    stepOrder.forEach((domIdx, staggerIdx) => {
-      const step = allSteps[domIdx];
-      const card = allCards[domIdx];
-      const destLeft = parseFloat(step.style.left);
-      const destTop  = parseFloat(step.style.top);
-      const dx = HUB_LEFT - destLeft;
-      const dy = HUB_TOP  - destTop;
-      const nodeDelay = 200 + staggerIdx * 120;
-      const cardDelay = nodeDelay + 200;
-
-      step.style.opacity = '0';
-      step.animate([
-        { opacity:0, transform:`translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) scale(0.1)` },
-        { opacity:1, transform:`translate(calc(-50% + ${dx*0.04}px), calc(-50% + ${dy*0.04}px)) scale(1.08)`, offset:0.7 },
-        { opacity:1, transform:'translate(-50%,-50%) scale(1)' }
-      ], { duration:750, delay:nodeDelay, easing:'cubic-bezier(.22,1,.36,1)', fill:'both' }).onfinish = () => { step.style.opacity = ''; };
-
-      card.style.opacity = '0';
-      card.animate([
-        { opacity:0, transform:'translateY(14px) scale(0.94)' },
-        { opacity:1, transform:'translateY(0) scale(1)' }
-      ], { duration:500, delay:cardDelay, easing:'cubic-bezier(.22,1,.36,1)', fill:'both' }).onfinish = () => { card.style.opacity = ''; };
-    });
-  }
-
-  const prObs = new IntersectionObserver(entries => {
+  const row = document.querySelector('.pr-arrow-row');
+  if (!row) return;
+  const arrows = Array.from(row.querySelectorAll('.pr-arrow'));
+  arrows.forEach((a, i) => {
+    a.style.opacity = '0';
+    a.style.transform = 'translateX(-24px)';
+  });
+  const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) { runPrAnim(); prObs.unobserve(wrap); }
+      if (!e.isIntersecting) return;
+      arrows.forEach((a, i) => {
+        a.animate([
+          { opacity:0, transform:'translateX(-24px)' },
+          { opacity:1, transform:'translateX(0)' }
+        ], { duration:600, delay: i * 120, easing:'cubic-bezier(.22,1,.36,1)', fill:'forwards' })
+        .onfinish = () => { a.style.opacity = ''; a.style.transform = ''; };
+      });
+      obs.unobserve(row);
     });
-  }, { threshold: 0.12 });
-  prObs.observe(wrap);
+  }, { threshold: 0.15 });
+  obs.observe(row);
 }());
 
 // Evidence Board — papers drop from above and settle into place
